@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    
     @IBOutlet private weak var profileTable: UITableView!
     private let loggedProfileMenu = [["Change password", "password"], ["Logout", "logout"], ["About", "about"]]
     private let unloggedProfileMenu = [["Login", "login"], ["About", "about"]]
@@ -16,7 +16,7 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Hi, User"
         checkUserLoggedIn()
     }
@@ -33,6 +33,14 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         cell.menuImage.image = UIImage(named: profileMenu[indexPath.row][1])
         cell.menuLabel.textColor = changeColor()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 && profileMenu[indexPath.row][0] == "Change password" {
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "PasswordChangeVC") as? PasswordChangeVC {
+                navigationController?.show(controller, sender: nil)
+            }
+        }
     }
 }
 

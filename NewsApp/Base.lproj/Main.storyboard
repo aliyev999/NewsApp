@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="1119.8473282442749" y="1524.6478873239437"/>
         </scene>
-        <!--View Controller-->
+        <!--Password ChangeVC-->
         <scene sceneID="SGd-nD-XKg">
             <objects>
-                <viewController id="J3W-Lr-Qy0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordChangeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J3W-Lr-Qy0" customClass="PasswordChangeVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ELy-fb-5mR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
