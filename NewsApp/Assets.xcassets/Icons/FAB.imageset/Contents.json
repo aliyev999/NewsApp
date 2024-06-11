@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "FAB@2x.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
