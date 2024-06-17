@@ -1,1 +1,1 @@
-NewsApp
+DailyDigest - News App
