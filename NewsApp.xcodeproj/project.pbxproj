@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		42183FE02C18D5B900EFB387 /* PasswordChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42183FDF2C18D5B900EFB387 /* PasswordChangeVC.swift */; };
+		426A2C982C1F59E4006D8B19 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A2C972C1F59E4006D8B19 /* LoginVC.swift */; };
 		428DC5AE2C14F33500D47541 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DC5AD2C14F33500D47541 /* News.swift */; };
 		428DC5B12C14F39100D47541 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DC5B02C14F39100D47541 /* User.swift */; };
 		42925F3A2C14F66700996B01 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42925F392C14F66700996B01 /* MenuCell.swift */; };
+		42DCF1832C2073F8007DACD9 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DCF1822C2073F8007DACD9 /* AboutVC.swift */; };
+		42DF56372C19ECB4003455B8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF56362C19ECB4003455B8 /* ProfileViewModel.swift */; };
 		42EECDF22C14487B0080BAC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EECDF12C14487B0080BAC0 /* AppDelegate.swift */; };
 		42EECDF42C14487B0080BAC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EECDF32C14487B0080BAC0 /* SceneDelegate.swift */; };
 		42EECDF92C14487B0080BAC0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 42EECDF82C14487B0080BAC0 /* Base */; };
@@ -25,9 +28,12 @@
 
 /* Begin PBXFileReference section */
 		42183FDF2C18D5B900EFB387 /* PasswordChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeVC.swift; sourceTree = "<group>"; };
+		426A2C972C1F59E4006D8B19 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		428DC5AD2C14F33500D47541 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		428DC5B02C14F39100D47541 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42925F392C14F66700996B01 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		42DCF1822C2073F8007DACD9 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		42DF56362C19ECB4003455B8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		42EECDEE2C14487B0080BAC0 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EECDF12C14487B0080BAC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42EECDF32C14487B0080BAC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +66,15 @@
 				428DC5B02C14F39100D47541 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		42DF56352C19EC9E003455B8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				42EECE0B2C145BEC0080BAC0 /* ProfileVC.swift */,
+				42DF56362C19ECB4003455B8 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		42EECDE52C14487B0080BAC0 = {
@@ -100,9 +115,11 @@
 			children = (
 				42EECE082C14589E0080BAC0 /* HomeVC.swift */,
 				42EECE0D2C145BFF0080BAC0 /* FavoriteVC.swift */,
-				42EECE0B2C145BEC0080BAC0 /* ProfileVC.swift */,
 				42EECE162C145F080080BAC0 /* NewsDetailVC.swift */,
+				426A2C972C1F59E4006D8B19 /* LoginVC.swift */,
 				42183FDF2C18D5B900EFB387 /* PasswordChangeVC.swift */,
+				42DCF1822C2073F8007DACD9 /* AboutVC.swift */,
+				42DF56352C19EC9E003455B8 /* Profile */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -186,14 +203,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DCF1832C2073F8007DACD9 /* AboutVC.swift in Sources */,
 				42EECE172C145F080080BAC0 /* NewsDetailVC.swift in Sources */,
 				42EECE0C2C145BEC0080BAC0 /* ProfileVC.swift in Sources */,
 				428DC5AE2C14F33500D47541 /* News.swift in Sources */,
 				42EECDF22C14487B0080BAC0 /* AppDelegate.swift in Sources */,
 				42EECE092C14589E0080BAC0 /* HomeVC.swift in Sources */,
 				428DC5B12C14F39100D47541 /* User.swift in Sources */,
+				42DF56372C19ECB4003455B8 /* ProfileViewModel.swift in Sources */,
 				42925F3A2C14F66700996B01 /* MenuCell.swift in Sources */,
 				42EECDFC2C14487B0080BAC0 /* NewsApp.xcdatamodeld in Sources */,
+				426A2C982C1F59E4006D8B19 /* LoginVC.swift in Sources */,
 				42EECE0E2C145BFF0080BAC0 /* FavoriteVC.swift in Sources */,
 				42183FE02C18D5B900EFB387 /* PasswordChangeVC.swift in Sources */,
 				42EECDF42C14487B0080BAC0 /* SceneDelegate.swift in Sources */,
@@ -350,6 +370,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DailyDigest;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -375,6 +397,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DailyDigest;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

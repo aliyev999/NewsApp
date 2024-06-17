@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ProfileModel: String {
+    case logout = "Logout"
+    case about = "About"
+}
+
 class ProfileVC: UIViewController {
     
     @IBOutlet private weak var profileTable: UITableView!
@@ -16,9 +21,13 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Hi, User"
+        configureUI()
         checkUserLoggedIn()
+    }
+    
+    private func configureUI() {
+        title = "Hi, User"
+        
     }
 }
 
@@ -36,8 +45,13 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 && profileMenu[indexPath.row][0] == "Change password" {
-            if let controller = storyboard?.instantiateViewController(withIdentifier: "PasswordChangeVC") as? PasswordChangeVC {
+        if profileMenu[indexPath.row][0] == "Login" {
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC {
+                navigationController?.show(controller, sender: nil)
+            }
+        }
+        if profileMenu[indexPath.row][0] == "About" {
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "AboutVC") as? AboutVC {
                 navigationController?.show(controller, sender: nil)
             }
         }
