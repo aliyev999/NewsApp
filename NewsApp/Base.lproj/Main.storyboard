@@ -119,6 +119,10 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="L59-iw-DWm"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="author" destination="r4g-yi-GDE" id="mfc-Ht-9F2"/>
+                        <outlet property="date" destination="K9W-b9-Ue8" id="7CL-oU-H4H"/>
+                        <outlet property="header" destination="Ewq-s5-v8j" id="gkB-93-tD2"/>
+                        <outlet property="image" destination="nuu-L3-gfJ" id="68E-U2-CzN"/>
                         <outlet property="readingTimeLabel" destination="aTP-QJ-QbM" id="U1R-wd-4ig"/>
                         <outlet property="textView" destination="TVb-1a-SKb" id="1QY-Bv-QQs"/>
                     </connections>
@@ -145,7 +149,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="r3C-LP-YqR">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="r3C-LP-YqR" customClass="NewsCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qgb-ej-MEO">
@@ -202,6 +206,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="248"/>
+                                        <connections>
+                                            <outlet property="newsHeader" destination="LGY-CT-MbT" id="RCF-yU-EsS"/>
+                                            <outlet property="newsImage" destination="ZgY-Vw-Q1x" id="OBx-Wd-sUj"/>
+                                            <outlet property="newsText" destination="15w-oD-SaT" id="Ssi-sG-XH8"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -436,7 +445,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jmI-TA-B0M">
                                 <rect key="frame" x="8" y="79" width="377" height="739"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Welcome to DailyDigest, your ultimate companion in the world of news and information.
+                                <string key="text">Welcome to DailyDigest, your ultimate companion in the world of news and information.
 
 DailyDigest is your go-to platform for staying informed and ahead. Our mission is simple yet powerful: to provide you with timely, reliable, and comprehensive news coverage that matters. Whether you're interested in global affairs, technology breakthroughs, business insights, or cultural trends, DailyDigest delivers it all with clarity and depth.
 
@@ -446,7 +455,7 @@ Join us on our journey to explore, learn, and engage with the latest development
 
 Stay informed. Stay ahead with DailyDigest.
 
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

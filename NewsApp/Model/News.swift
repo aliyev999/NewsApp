@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct News {
-    let header: String
-    let text: String
-    let date: String
-    let author: String
+struct News: Codable {
+    let header: String?
+    let text: String?
+    let image: String?
+    let date: String?
+    let author: String?
 }
 

@@ -10,14 +10,15 @@ import UIKit
 class HomeVC: UIViewController {
     
     
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionViewContraint: NSLayoutConstraint!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionViewContraint: NSLayoutConstraint!
+    private var selectedIndexPath: IndexPath?
+    private var newsList: [News] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
     
@@ -34,10 +35,17 @@ class HomeVC: UIViewController {
         view.layoutIfNeeded()
     }
     
+    private func getData() {
+        let news = GetNewsData()
+        news.parseNewsFile(news: &newsList)
+        collectionView.reloadData()
+    }
+    
     private func setupUI() {
         updateDateLabelVisibility()
-        getDate()
         addSearchButton()
+        getDate()
+        getData()
     }
     
     private func addSearchButton() {
@@ -55,30 +63,46 @@ class HomeVC: UIViewController {
         dateLabel.text = formattedDate
     }
     
-    @objc 
+    @objc
     private func searchButtonTapped() {
         
     }
     
     @IBAction func readMoreTapped(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(identifier: "\(NewsDetailVC.self)") as! NewsDetailVC
-        navigationController?.show(controller, sender: nil)
+        guard let selectedIndexPath = selectedIndexPath else {
+            print("Error: selectedIndexPath is nil")
+            return
+        }
+        
+        let selectedNewsItem = newsList[selectedIndexPath.row]
+        print(selectedNewsItem)
     }
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        newsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as! NewsCell
+        let newsItem = newsList[indexPath.row]
+        cell.newsHeader.text = newsItem.header
+        cell.newsText.text = newsItem.text
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         .init(width: collectionView.frame.width, height: 240)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
+        let controller =  storyboard?.instantiateViewController(withIdentifier: "NewsDetailVC") as! NewsDetailVC
+        controller.selectedNews = newsList[indexPath.row]
+        navigationController?.show(controller, sender: nil)
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

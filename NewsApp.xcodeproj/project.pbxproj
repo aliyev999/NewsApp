@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		42183FE02C18D5B900EFB387 /* PasswordChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42183FDF2C18D5B900EFB387 /* PasswordChangeVC.swift */; };
+		422695AE2C22208F00172198 /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 422695AD2C22208F00172198 /* news.json */; };
+		422695B02C22215600172198 /* GetNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422695AF2C22215600172198 /* GetNewsData.swift */; };
+		422695B22C232C8800172198 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422695B12C232C8800172198 /* NewsCell.swift */; };
 		426A2C982C1F59E4006D8B19 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A2C972C1F59E4006D8B19 /* LoginVC.swift */; };
 		428DC5AE2C14F33500D47541 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DC5AD2C14F33500D47541 /* News.swift */; };
 		428DC5B12C14F39100D47541 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DC5B02C14F39100D47541 /* User.swift */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		42183FDF2C18D5B900EFB387 /* PasswordChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeVC.swift; sourceTree = "<group>"; };
+		422695AD2C22208F00172198 /* news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
+		422695AF2C22215600172198 /* GetNewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNewsData.swift; sourceTree = "<group>"; };
+		422695B12C232C8800172198 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		426A2C972C1F59E4006D8B19 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		428DC5AD2C14F33500D47541 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		428DC5B02C14F39100D47541 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -59,11 +65,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		422695AC2C22207600172198 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				422695AD2C22208F00172198 /* news.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		428DC5AC2C14F32100D47541 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				428DC5AD2C14F33500D47541 /* News.swift */,
 				428DC5B02C14F39100D47541 /* User.swift */,
+				422695AF2C22215600172198 /* GetNewsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +113,7 @@
 			children = (
 				42EECDF12C14487B0080BAC0 /* AppDelegate.swift */,
 				42EECDF32C14487B0080BAC0 /* SceneDelegate.swift */,
+				422695AC2C22207600172198 /* Data */,
 				428DC5AC2C14F32100D47541 /* Model */,
 				42EECE0A2C1458AB0080BAC0 /* VC */,
 				42EECE0F2C145DC20080BAC0 /* Cell */,
@@ -114,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				42EECE082C14589E0080BAC0 /* HomeVC.swift */,
-				42EECE0D2C145BFF0080BAC0 /* FavoriteVC.swift */,
 				42EECE162C145F080080BAC0 /* NewsDetailVC.swift */,
+				42EECE0D2C145BFF0080BAC0 /* FavoriteVC.swift */,
 				426A2C972C1F59E4006D8B19 /* LoginVC.swift */,
 				42183FDF2C18D5B900EFB387 /* PasswordChangeVC.swift */,
 				42DCF1822C2073F8007DACD9 /* AboutVC.swift */,
@@ -128,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				42925F392C14F66700996B01 /* MenuCell.swift */,
+				422695B12C232C8800172198 /* NewsCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -192,6 +209,7 @@
 			files = (
 				42EECDFE2C14487C0080BAC0 /* Assets.xcassets in Resources */,
 				42EECE012C14487C0080BAC0 /* Base in Resources */,
+				422695AE2C22208F00172198 /* news.json in Resources */,
 				42EECDF92C14487B0080BAC0 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,8 +232,10 @@
 				42925F3A2C14F66700996B01 /* MenuCell.swift in Sources */,
 				42EECDFC2C14487B0080BAC0 /* NewsApp.xcdatamodeld in Sources */,
 				426A2C982C1F59E4006D8B19 /* LoginVC.swift in Sources */,
+				422695B02C22215600172198 /* GetNewsData.swift in Sources */,
 				42EECE0E2C145BFF0080BAC0 /* FavoriteVC.swift in Sources */,
 				42183FE02C18D5B900EFB387 /* PasswordChangeVC.swift in Sources */,
+				422695B22C232C8800172198 /* NewsCell.swift in Sources */,
 				42EECDF42C14487B0080BAC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
