@@ -9,19 +9,25 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewContraint: NSLayoutConstraint!
-    private var selectedIndexPath: IndexPath?
-    private var newsList: [News] = []
     
+    private var newsList: [News] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
+    private func setupUI() {
+        updateDateLabelVisibility()
+        addSearchButton()
+        getDate()
+        getData()
+    }
+    
+    //Hides current date on scroll
     private func updateDateLabelVisibility() {
         let shouldHideDateLabel = collectionView.contentOffset.y > 0
         dateLabel.isHidden = shouldHideDateLabel
@@ -35,25 +41,21 @@ class HomeVC: UIViewController {
         view.layoutIfNeeded()
     }
     
+    //Get news list
     private func getData() {
-        let news = GetNewsData()
-        news.parseNewsFile(news: &newsList)
+        let news = NewsData()
+        news.getNews(news: &newsList)
         collectionView.reloadData()
     }
     
-    private func setupUI() {
-        updateDateLabelVisibility()
-        addSearchButton()
-        getDate()
-        getData()
-    }
-    
+    //Navbar search button
     private func addSearchButton() {
         let searchImage = UIImage(systemName: "magnifyingglass")
         let searchButton = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(searchButtonTapped))
         navigationItem.rightBarButtonItem = searchButton
     }
     
+    //GetCurrentDate
     private func getDate() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMMM"
@@ -62,23 +64,15 @@ class HomeVC: UIViewController {
         let formattedDate = dateFormatter.string(from: currentDate)
         dateLabel.text = formattedDate
     }
-    
+    //Search button action
     @objc
     private func searchButtonTapped() {
-        
-    }
-    
-    @IBAction func readMoreTapped(_ sender: Any) {
-        guard let selectedIndexPath = selectedIndexPath else {
-            print("Error: selectedIndexPath is nil")
-            return
-        }
-        
-        let selectedNewsItem = newsList[selectedIndexPath.row]
-        print(selectedNewsItem)
+        let controller = storyboard?.instantiateViewController(withIdentifier: "SearchVC") as! SearchVC
+        navigationController?.show(controller, sender: nil)
     }
 }
 
+//News list CollectionView Settings
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -90,6 +84,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let newsItem = newsList[indexPath.row]
         cell.newsHeader.text = newsItem.header
         cell.newsText.text = newsItem.text
+        cell.newsImage.image = UIImage(named: newsItem.image ?? "")
         return cell
     }
     
@@ -98,7 +93,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedIndexPath = indexPath
         let controller =  storyboard?.instantiateViewController(withIdentifier: "NewsDetailVC") as! NewsDetailVC
         controller.selectedNews = newsList[indexPath.row]
         navigationController?.show(controller, sender: nil)

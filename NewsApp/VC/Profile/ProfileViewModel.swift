@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+let loggedProfileMenu = [["Change password", "password"], ["Logout", "logout"], ["About", "about"]]
+let unloggedProfileMenu = [["Login", "login"], ["About", "about"]]
+var profileMenu: [[String]] = []

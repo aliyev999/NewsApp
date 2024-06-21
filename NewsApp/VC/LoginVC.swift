@@ -10,21 +10,28 @@ import UIKit
 class LoginVC: UIViewController {
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var surnameField: UITextField!
     @IBOutlet weak var repeatPasswordField: UITextField!
     @IBOutlet weak var actionButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+}
+    //Hides textfields in login and register
+    private func isHidden(){
+        repeatPasswordField.isHidden.toggle()
+        nameField.isHidden.toggle()
+        surnameField.isHidden.toggle()
     }
     
     @IBAction func segmentControlAction(_ sender: Any) {
         switch segmentControl.selectedSegmentIndex {
         case 0:
-            repeatPasswordField.isHidden = true
+            isHidden()
             actionButton.setTitle("Login", for: .normal)
         case 1:
-            repeatPasswordField.isHidden = false
+            isHidden()
             actionButton.setTitle("Register", for: .normal)
         default:
             break

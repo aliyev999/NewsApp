@@ -10,128 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News DetailVC-->
-        <scene sceneID="Me8-bh-gqo">
-            <objects>
-                <viewController storyboardIdentifier="NewsDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rer-oc-Cwe" customClass="NewsDetailVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bue-g7-nIp">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newss" translatesAutoresizingMaskIntoConstraints="NO" id="nuu-L3-gfJ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="330"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="330" id="pJK-wD-Tbn"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiK-Hq-30E">
-                                <rect key="frame" x="0.0" y="275" width="393" height="463"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TVb-1a-SKb">
-                                        <rect key="frame" x="14" y="-6" width="365" height="449"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">LONDON — Cryptocurrencies “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said. Digital currencies like bitcoin, ether and even dogecoin have been on a tear this year, reminding some investors of the 2017 crypto bubble in which bitcoin blasted toward $20,000, only to sink as low as $3,122 a year later. Asked at a press conference Thursday about the rising value of cryptocurrencies, Bailey said: “They have no intrinsic value. That doesn’t mean to say people don’t put value on them, because they can have extrinsic value. But they have no intrinsic value.” “I’m going to say this very bluntly again,” he added. “Buy them only if you’re prepared to lose all your money.” Bailey’s comments echoed a similar warning from the U.K.’s Financial Conduct Authority. “Investing in cryptoassets, or investments and lending linked to them, generally involves taking very high risks with investors’ money,” the financial services watchdog said in January. “If consumers invest in these types of product, they should be prepared to lose all their money.” Bailey, who was formerly the chief executive of the FCA, has long been a skeptic of crypto. In 2017, he warned: “If you want to invest in bitcoin, be prepared to lose all your money.”</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="TVb-1a-SKb" firstAttribute="centerX" secondItem="HiK-Hq-30E" secondAttribute="centerX" id="4iZ-DN-x20"/>
-                                    <constraint firstAttribute="bottom" secondItem="TVb-1a-SKb" secondAttribute="bottom" constant="20" symbolic="YES" id="8Cm-8a-XgX"/>
-                                    <constraint firstAttribute="trailing" secondItem="TVb-1a-SKb" secondAttribute="trailing" constant="14" id="ONt-lX-T4i"/>
-                                    <constraint firstItem="TVb-1a-SKb" firstAttribute="leading" secondItem="HiK-Hq-30E" secondAttribute="leading" constant="14" id="TqG-FA-lJ8"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="20"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjU-2W-R8n">
-                                <rect key="frame" x="32" y="109" width="329" height="150"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday, 9 May 2021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9W-b9-Ue8">
-                                        <rect key="frame" x="24" y="15" width="281" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto investors should be prepared to lose all their money, BOE governor says" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-s5-v8j">
-                                        <rect key="frame" x="24" y="40" width="281" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="Pde-5q-qT9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published by Ryan Browne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4g-yi-GDE">
-                                        <rect key="frame" x="24" y="106" width="281" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTP-QJ-QbM">
-                                        <rect key="frame" x="24" y="122" width="285" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.69916701158940397" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="aTP-QJ-QbM" secondAttribute="trailing" constant="20" symbolic="YES" id="3PY-Ra-F89"/>
-                                    <constraint firstItem="aTP-QJ-QbM" firstAttribute="top" secondItem="r4g-yi-GDE" secondAttribute="bottom" constant="4" id="3z8-E8-Muj"/>
-                                    <constraint firstAttribute="trailing" secondItem="K9W-b9-Ue8" secondAttribute="trailing" constant="24" id="5yf-YT-0R9"/>
-                                    <constraint firstAttribute="height" constant="150" id="B9P-F3-BgG"/>
-                                    <constraint firstItem="K9W-b9-Ue8" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="JkW-oc-LfF"/>
-                                    <constraint firstAttribute="trailing" secondItem="r4g-yi-GDE" secondAttribute="trailing" constant="24" id="KR9-wR-WTL"/>
-                                    <constraint firstItem="K9W-b9-Ue8" firstAttribute="top" secondItem="DjU-2W-R8n" secondAttribute="top" constant="15" id="Lx9-FL-OSH"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ewq-s5-v8j" secondAttribute="trailing" constant="24" id="YPw-S4-Hg7"/>
-                                    <constraint firstItem="aTP-QJ-QbM" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="gl8-iD-WvI"/>
-                                    <constraint firstItem="Ewq-s5-v8j" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="hA1-aj-oS0"/>
-                                    <constraint firstItem="Ewq-s5-v8j" firstAttribute="top" secondItem="K9W-b9-Ue8" secondAttribute="bottom" constant="8" id="noF-9y-lzT"/>
-                                    <constraint firstItem="r4g-yi-GDE" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="rfS-5s-sBr"/>
-                                    <constraint firstItem="r4g-yi-GDE" firstAttribute="top" secondItem="Ewq-s5-v8j" secondAttribute="bottom" constant="8" id="vB6-ks-f3D"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="20"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Vfa-su-Jfn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Vfa-su-Jfn" firstAttribute="trailing" secondItem="DjU-2W-R8n" secondAttribute="trailing" constant="32" id="5ZI-WC-wzo"/>
-                            <constraint firstItem="nuu-L3-gfJ" firstAttribute="top" secondItem="Bue-g7-nIp" secondAttribute="top" id="7xD-4d-soE"/>
-                            <constraint firstItem="HiK-Hq-30E" firstAttribute="trailing" secondItem="nuu-L3-gfJ" secondAttribute="trailing" id="9og-oW-53Q"/>
-                            <constraint firstItem="Vfa-su-Jfn" firstAttribute="bottom" secondItem="HiK-Hq-30E" secondAttribute="bottom" constant="31" id="AGg-At-VXx"/>
-                            <constraint firstItem="DjU-2W-R8n" firstAttribute="leading" secondItem="Vfa-su-Jfn" secondAttribute="leading" constant="32" id="CXT-Aw-ny4"/>
-                            <constraint firstItem="HiK-Hq-30E" firstAttribute="leading" secondItem="nuu-L3-gfJ" secondAttribute="leading" id="HcK-B4-mvC"/>
-                            <constraint firstItem="nuu-L3-gfJ" firstAttribute="leading" secondItem="Vfa-su-Jfn" secondAttribute="leading" id="J8j-Wk-gxs"/>
-                            <constraint firstItem="DjU-2W-R8n" firstAttribute="top" secondItem="Vfa-su-Jfn" secondAttribute="top" constant="50" id="Mzn-h2-xcL"/>
-                            <constraint firstItem="nuu-L3-gfJ" firstAttribute="trailing" secondItem="Vfa-su-Jfn" secondAttribute="trailing" id="Xpw-Yj-w9A"/>
-                            <constraint firstItem="HiK-Hq-30E" firstAttribute="top" secondItem="DjU-2W-R8n" secondAttribute="bottom" constant="16" id="bNP-wz-Xrw"/>
-                            <constraint firstItem="TVb-1a-SKb" firstAttribute="top" secondItem="DjU-2W-R8n" secondAttribute="bottom" constant="10" id="c41-DW-7Fw"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="L59-iw-DWm"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="author" destination="r4g-yi-GDE" id="mfc-Ht-9F2"/>
-                        <outlet property="date" destination="K9W-b9-Ue8" id="7CL-oU-H4H"/>
-                        <outlet property="header" destination="Ewq-s5-v8j" id="gkB-93-tD2"/>
-                        <outlet property="image" destination="nuu-L3-gfJ" id="68E-U2-CzN"/>
-                        <outlet property="readingTimeLabel" destination="aTP-QJ-QbM" id="U1R-wd-4ig"/>
-                        <outlet property="textView" destination="TVb-1a-SKb" id="1QY-Bv-QQs"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ykO-NJ-CWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1698.4732824427481" y="1524.6478873239437"/>
-        </scene>
-        <!--Home-->
+        <!--News-->
         <scene sceneID="Rrc-rk-hR9">
             <objects>
                 <viewController id="6GG-yJ-C2U" customClass="HomeVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,25 +57,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhM-wZ-iwz">
-                                                    <rect key="frame" x="0.0" y="187" width="106.33333333333333" height="34"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Read more">
-                                                        <color key="baseForegroundColor" name="firstColor"/>
-                                                    </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="readMoreTapped:" destination="6GG-yJ-C2U" eventType="touchUpInside" id="WRA-ZV-agT"/>
-                                                    </connections>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzR-be-rKi">
+                                                    <rect key="frame" x="12" y="191" width="83" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="firstColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="15w-oD-SaT" firstAttribute="top" secondItem="LGY-CT-MbT" secondAttribute="bottom" constant="8" id="8FP-cm-y8C"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KhM-wZ-iwz" secondAttribute="trailing" constant="20" symbolic="YES" id="Cl3-jv-2dF"/>
-                                                <constraint firstItem="KhM-wZ-iwz" firstAttribute="leading" secondItem="Qgb-ej-MEO" secondAttribute="leading" id="Elu-K6-FkF"/>
+                                                <constraint firstItem="TzR-be-rKi" firstAttribute="leading" secondItem="Qgb-ej-MEO" secondAttribute="leading" constant="12" id="8T6-8S-xq9"/>
                                                 <constraint firstAttribute="trailing" secondItem="LGY-CT-MbT" secondAttribute="trailing" constant="12" id="FbS-8Z-Jcf"/>
                                                 <constraint firstItem="ZgY-Vw-Q1x" firstAttribute="leading" secondItem="Qgb-ej-MEO" secondAttribute="leading" id="H3w-b3-gMi"/>
-                                                <constraint firstItem="KhM-wZ-iwz" firstAttribute="top" secondItem="15w-oD-SaT" secondAttribute="bottom" constant="4" id="KuC-WM-5MM"/>
+                                                <constraint firstItem="TzR-be-rKi" firstAttribute="top" secondItem="15w-oD-SaT" secondAttribute="bottom" constant="8" symbolic="YES" id="HW6-sV-Vyt"/>
                                                 <constraint firstItem="LGY-CT-MbT" firstAttribute="leading" secondItem="Qgb-ej-MEO" secondAttribute="leading" constant="12" id="QAG-oo-13r"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TzR-be-rKi" secondAttribute="trailing" constant="20" symbolic="YES" id="R8U-lb-Yw3"/>
                                                 <constraint firstItem="15w-oD-SaT" firstAttribute="leading" secondItem="Qgb-ej-MEO" secondAttribute="leading" constant="12" id="WfF-Mv-isJ"/>
                                                 <constraint firstItem="LGY-CT-MbT" firstAttribute="centerY" secondItem="Qgb-ej-MEO" secondAttribute="centerY" id="YMj-DB-dU1"/>
                                                 <constraint firstItem="LGY-CT-MbT" firstAttribute="top" secondItem="ZgY-Vw-Q1x" secondAttribute="bottom" constant="8" symbolic="YES" id="dto-s7-1Sb"/>
@@ -231,13 +106,14 @@
                             <constraint firstItem="mrs-9T-20B" firstAttribute="trailing" secondItem="43X-i9-Wae" secondAttribute="trailing" id="FL5-aj-7MN"/>
                             <constraint firstItem="43X-i9-Wae" firstAttribute="leading" secondItem="mrs-9T-20B" secondAttribute="leading" id="GeE-4D-J1s"/>
                             <constraint firstItem="43X-i9-Wae" firstAttribute="top" secondItem="rlc-So-ZG7" secondAttribute="bottom" constant="8" symbolic="YES" id="ISU-r1-Ajg"/>
+                            <constraint firstItem="mrs-9T-20B" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rlc-So-ZG7" secondAttribute="trailing" symbolic="YES" id="M8u-uv-lpc"/>
                             <constraint firstItem="rlc-So-ZG7" firstAttribute="leading" secondItem="mrs-9T-20B" secondAttribute="leading" constant="18" id="VeC-jL-pR3"/>
                             <constraint firstItem="43X-i9-Wae" firstAttribute="top" secondItem="mrs-9T-20B" secondAttribute="top" constant="32" id="YvL-FM-bqB"/>
                             <constraint firstItem="rlc-So-ZG7" firstAttribute="top" secondItem="mrs-9T-20B" secondAttribute="top" id="joh-vI-gxz"/>
                             <constraint firstItem="mrs-9T-20B" firstAttribute="bottom" secondItem="43X-i9-Wae" secondAttribute="bottom" id="kzo-iv-Og5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" leftItemsSupplementBackButton="YES" id="hrg-eL-UbX"/>
+                    <navigationItem key="navigationItem" title="News" leftItemsSupplementBackButton="YES" id="hrg-eL-UbX"/>
                     <connections>
                         <outlet property="collectionView" destination="43X-i9-Wae" id="zj7-9E-Yp4"/>
                         <outlet property="collectionViewContraint" destination="YvL-FM-bqB" id="wSg-ms-g3h"/>
@@ -248,6 +124,137 @@
             </objects>
             <point key="canvasLocation" x="-819.08396946564881" y="1524.6478873239437"/>
         </scene>
+        <!--News DetailVC-->
+        <scene sceneID="Me8-bh-gqo">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rer-oc-Cwe" customClass="NewsDetailVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bue-g7-nIp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newss" translatesAutoresizingMaskIntoConstraints="NO" id="nuu-L3-gfJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="pJK-wD-Tbn"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiK-Hq-30E">
+                                <rect key="frame" x="0.0" y="214" width="393" height="545"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TVb-1a-SKb">
+                                        <rect key="frame" x="14" y="65" width="365" height="460"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">LONDON — Cryptocurrencies “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said. Digital currencies like bitcoin, ether and even dogecoin have been on a tear this year, reminding some investors of the 2017 crypto bubble in which bitcoin blasted toward $20,000, only to sink as low as $3,122 a year later. Asked at a press conference Thursday about the rising value of cryptocurrencies, Bailey said: “They have no intrinsic value. That doesn’t mean to say people don’t put value on them, because they can have extrinsic value. But they have no intrinsic value.” “I’m going to say this very bluntly again,” he added. “Buy them only if you’re prepared to lose all your money.” Bailey’s comments echoed a similar warning from the U.K.’s Financial Conduct Authority. “Investing in cryptoassets, or investments and lending linked to them, generally involves taking very high risks with investors’ money,” the financial services watchdog said in January. “If consumers invest in these types of product, they should be prepared to lose all their money.” Bailey, who was formerly the chief executive of the FCA, has long been a skeptic of crypto. In 2017, he warned: “If you want to invest in bitcoin, be prepared to lose all your money.”</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TVb-1a-SKb" firstAttribute="centerX" secondItem="HiK-Hq-30E" secondAttribute="centerX" id="4iZ-DN-x20"/>
+                                    <constraint firstAttribute="bottom" secondItem="TVb-1a-SKb" secondAttribute="bottom" constant="20" symbolic="YES" id="8Cm-8a-XgX"/>
+                                    <constraint firstAttribute="trailing" secondItem="TVb-1a-SKb" secondAttribute="trailing" constant="14" id="ONt-lX-T4i"/>
+                                    <constraint firstItem="TVb-1a-SKb" firstAttribute="leading" secondItem="HiK-Hq-30E" secondAttribute="leading" constant="14" id="TqG-FA-lJ8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="25"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjU-2W-R8n">
+                                <rect key="frame" x="32" y="109" width="329" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sunday, 9 May 2021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9W-b9-Ue8">
+                                        <rect key="frame" x="24" y="15" width="138" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto investors should be prepared to lose all their money, BOE governor says" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-s5-v8j">
+                                        <rect key="frame" x="24" y="40" width="281" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="Pde-5q-qT9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published by Ryan Browne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4g-yi-GDE">
+                                        <rect key="frame" x="24" y="106" width="281" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTP-QJ-QbM">
+                                        <rect key="frame" x="24" y="122" width="285" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeM-CQ-FGZ">
+                                        <rect key="frame" x="253.33333333333329" y="14" width="55.666666666666657" height="18"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.69916701158940397" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aTP-QJ-QbM" secondAttribute="trailing" constant="20" symbolic="YES" id="3PY-Ra-F89"/>
+                                    <constraint firstItem="aTP-QJ-QbM" firstAttribute="top" secondItem="r4g-yi-GDE" secondAttribute="bottom" constant="4" id="3z8-E8-Muj"/>
+                                    <constraint firstAttribute="height" constant="150" id="B9P-F3-BgG"/>
+                                    <constraint firstItem="Ewq-s5-v8j" firstAttribute="top" secondItem="VeM-CQ-FGZ" secondAttribute="bottom" constant="8" id="Elq-9N-T6O"/>
+                                    <constraint firstItem="K9W-b9-Ue8" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="JkW-oc-LfF"/>
+                                    <constraint firstAttribute="trailing" secondItem="r4g-yi-GDE" secondAttribute="trailing" constant="24" id="KR9-wR-WTL"/>
+                                    <constraint firstItem="K9W-b9-Ue8" firstAttribute="top" secondItem="DjU-2W-R8n" secondAttribute="top" constant="15" id="Lx9-FL-OSH"/>
+                                    <constraint firstItem="VeM-CQ-FGZ" firstAttribute="leading" secondItem="K9W-b9-Ue8" secondAttribute="trailing" constant="91.333333333333286" id="Rda-xc-mtD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ewq-s5-v8j" secondAttribute="trailing" constant="24" id="YPw-S4-Hg7"/>
+                                    <constraint firstItem="VeM-CQ-FGZ" firstAttribute="top" secondItem="DjU-2W-R8n" secondAttribute="top" constant="14" id="aBT-C0-49a"/>
+                                    <constraint firstItem="aTP-QJ-QbM" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="gl8-iD-WvI"/>
+                                    <constraint firstItem="Ewq-s5-v8j" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="hA1-aj-oS0"/>
+                                    <constraint firstAttribute="trailing" secondItem="VeM-CQ-FGZ" secondAttribute="trailing" constant="20" symbolic="YES" id="mlH-TA-cGi"/>
+                                    <constraint firstItem="Ewq-s5-v8j" firstAttribute="top" secondItem="K9W-b9-Ue8" secondAttribute="bottom" constant="8" id="noF-9y-lzT"/>
+                                    <constraint firstItem="r4g-yi-GDE" firstAttribute="leading" secondItem="DjU-2W-R8n" secondAttribute="leading" constant="24" id="rfS-5s-sBr"/>
+                                    <constraint firstItem="r4g-yi-GDE" firstAttribute="top" secondItem="Ewq-s5-v8j" secondAttribute="bottom" constant="8" id="vB6-ks-f3D"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="20"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vfa-su-Jfn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vfa-su-Jfn" firstAttribute="trailing" secondItem="DjU-2W-R8n" secondAttribute="trailing" constant="32" id="5ZI-WC-wzo"/>
+                            <constraint firstItem="nuu-L3-gfJ" firstAttribute="top" secondItem="Bue-g7-nIp" secondAttribute="top" id="7xD-4d-soE"/>
+                            <constraint firstItem="HiK-Hq-30E" firstAttribute="trailing" secondItem="nuu-L3-gfJ" secondAttribute="trailing" id="9og-oW-53Q"/>
+                            <constraint firstItem="Vfa-su-Jfn" firstAttribute="bottom" secondItem="HiK-Hq-30E" secondAttribute="bottom" constant="10" id="AGg-At-VXx"/>
+                            <constraint firstItem="DjU-2W-R8n" firstAttribute="leading" secondItem="Vfa-su-Jfn" secondAttribute="leading" constant="32" id="CXT-Aw-ny4"/>
+                            <constraint firstItem="HiK-Hq-30E" firstAttribute="leading" secondItem="nuu-L3-gfJ" secondAttribute="leading" id="HcK-B4-mvC"/>
+                            <constraint firstItem="nuu-L3-gfJ" firstAttribute="leading" secondItem="Vfa-su-Jfn" secondAttribute="leading" id="J8j-Wk-gxs"/>
+                            <constraint firstItem="HiK-Hq-30E" firstAttribute="top" secondItem="Vfa-su-Jfn" secondAttribute="top" constant="155" id="Mnb-Y8-Y61"/>
+                            <constraint firstItem="DjU-2W-R8n" firstAttribute="top" secondItem="Vfa-su-Jfn" secondAttribute="top" constant="50" id="Mzn-h2-xcL"/>
+                            <constraint firstItem="nuu-L3-gfJ" firstAttribute="trailing" secondItem="Vfa-su-Jfn" secondAttribute="trailing" id="Xpw-Yj-w9A"/>
+                            <constraint firstItem="TVb-1a-SKb" firstAttribute="top" secondItem="DjU-2W-R8n" secondAttribute="bottom" constant="20" id="c41-DW-7Fw"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="L59-iw-DWm"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="author" destination="r4g-yi-GDE" id="mfc-Ht-9F2"/>
+                        <outlet property="category" destination="VeM-CQ-FGZ" id="ejj-Rw-oCQ"/>
+                        <outlet property="date" destination="K9W-b9-Ue8" id="7CL-oU-H4H"/>
+                        <outlet property="header" destination="Ewq-s5-v8j" id="gkB-93-tD2"/>
+                        <outlet property="image" destination="nuu-L3-gfJ" id="68E-U2-CzN"/>
+                        <outlet property="readingTimeLabel" destination="aTP-QJ-QbM" id="U1R-wd-4ig"/>
+                        <outlet property="textView" destination="TVb-1a-SKb" id="1QY-Bv-QQs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykO-NJ-CWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1698.4732824427481" y="1524.6478873239437"/>
+        </scene>
         <!--Favorite-->
         <scene sceneID="G6C-hN-CD1">
             <objects>
@@ -255,10 +262,97 @@
                     <view key="view" contentMode="scaleToFill" id="46C-DD-cdq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UUB-ml-Zpo">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f3h-gx-P1E">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteCell" id="jG7-fM-nxb" customClass="FavoriteCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="248"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IlL-NS-H7D">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="248"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newss" translatesAutoresizingMaskIntoConstraints="NO" id="IWD-F2-vj4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="98" id="zLk-Ck-6jl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto investors should be prepared to lose all their money, BOE governor says" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DW-qh-bRJ">
+                                                    <rect key="frame" x="12" y="108" width="369" height="20.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.333333333333329" id="CWl-Jb-3a8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXE-cI-vCT">
+                                                    <rect key="frame" x="12" y="136.33333333333334" width="369" height="40.666666666666657"/>
+                                                    <string key="text">LONDON — Cryptocurrencies “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said. Digital currencies like bitcoin, ether and even dogecoin have been on a tear this year, reminding some investors of the 2017 crypto bubble in which bitcoin blasted toward</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-0E-Dd0">
+                                                    <rect key="frame" x="12" y="185" width="83" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="firstColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fUI-0E-Dd0" secondAttribute="trailing" constant="20" symbolic="YES" id="1Xd-qP-zDF"/>
+                                                <constraint firstItem="7DW-qh-bRJ" firstAttribute="top" secondItem="IWD-F2-vj4" secondAttribute="bottom" constant="10" id="55R-59-ZNR"/>
+                                                <constraint firstItem="7DW-qh-bRJ" firstAttribute="leading" secondItem="IlL-NS-H7D" secondAttribute="leading" constant="12" id="Adx-wc-NqD"/>
+                                                <constraint firstAttribute="trailing" secondItem="IWD-F2-vj4" secondAttribute="trailing" id="FrU-Tg-FLY"/>
+                                                <constraint firstAttribute="trailing" secondItem="VXE-cI-vCT" secondAttribute="trailing" constant="12" id="TKF-oq-TrM"/>
+                                                <constraint firstAttribute="trailing" secondItem="VXE-cI-vCT" secondAttribute="trailing" constant="12" id="U7x-hv-tc8"/>
+                                                <constraint firstItem="VXE-cI-vCT" firstAttribute="leading" secondItem="IlL-NS-H7D" secondAttribute="leading" constant="12" id="ZEf-tY-BgW"/>
+                                                <constraint firstItem="fUI-0E-Dd0" firstAttribute="leading" secondItem="IlL-NS-H7D" secondAttribute="leading" constant="12" id="aEG-3o-7vW"/>
+                                                <constraint firstItem="VXE-cI-vCT" firstAttribute="leading" secondItem="IlL-NS-H7D" secondAttribute="leading" constant="12" id="d0D-s7-DnF"/>
+                                                <constraint firstAttribute="trailing" secondItem="7DW-qh-bRJ" secondAttribute="trailing" constant="12" id="df7-cU-D1Z"/>
+                                                <constraint firstItem="IWD-F2-vj4" firstAttribute="leading" secondItem="IlL-NS-H7D" secondAttribute="leading" id="g2T-Tz-iKW"/>
+                                                <constraint firstItem="IWD-F2-vj4" firstAttribute="top" secondItem="IlL-NS-H7D" secondAttribute="top" id="gT0-OR-P9P"/>
+                                                <constraint firstItem="VXE-cI-vCT" firstAttribute="top" secondItem="7DW-qh-bRJ" secondAttribute="bottom" constant="8" id="lLg-If-PNo"/>
+                                                <constraint firstItem="fUI-0E-Dd0" firstAttribute="top" secondItem="VXE-cI-vCT" secondAttribute="bottom" constant="8" symbolic="YES" id="nl7-HY-eWh"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="248"/>
+                                        <connections>
+                                            <outlet property="newsHeader" destination="7DW-qh-bRJ" id="J4y-6n-D4S"/>
+                                            <outlet property="newsImage" destination="IWD-F2-vj4" id="9rx-le-dPY"/>
+                                            <outlet property="newsText" destination="VXE-cI-vCT" id="bGn-Dg-miz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zzj-qI-431" id="COJ-yg-Lc2"/>
+                                    <outlet property="delegate" destination="Zzj-qI-431" id="KAY-tu-NWD"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iYR-g9-oRD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UUB-ml-Zpo" firstAttribute="leading" secondItem="iYR-g9-oRD" secondAttribute="leading" id="3is-Uk-uMR"/>
+                            <constraint firstItem="iYR-g9-oRD" firstAttribute="trailing" secondItem="UUB-ml-Zpo" secondAttribute="trailing" id="9sN-2T-goV"/>
+                            <constraint firstItem="iYR-g9-oRD" firstAttribute="bottom" secondItem="UUB-ml-Zpo" secondAttribute="bottom" id="PAv-qX-Ofs"/>
+                            <constraint firstItem="UUB-ml-Zpo" firstAttribute="top" secondItem="iYR-g9-oRD" secondAttribute="top" id="WjU-3h-wJH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favorite" style="editor" id="Yho-Uh-zeN"/>
+                    <connections>
+                        <outlet property="collectionView" destination="UUB-ml-Zpo" id="kJp-Qa-7At"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSC-ZJ-LFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,8 +454,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-xU-2Xf">
-                                <rect key="frame" x="60" y="245" width="273" height="197.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-xU-2Xf">
+                                <rect key="frame" x="60" y="245" width="273" height="167.33333333333337"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nds-KK-7cF">
                                         <rect key="frame" x="0.0" y="0.0" width="273" height="35.333333333333336"/>
@@ -373,23 +467,33 @@
                                             <action selector="segmentControlAction:" destination="bTH-6A-O0Q" eventType="valueChanged" id="K1z-aL-o9l"/>
                                         </connections>
                                     </segmentedControl>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnC-hw-w0I">
-                                        <rect key="frame" x="0.0" y="54.333333333333314" width="273" height="34.333333333333343"/>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnC-hw-w0I">
+                                        <rect key="frame" x="0.0" y="39.333333333333314" width="273" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jx-oL-DrN">
+                                        <rect key="frame" x="0.0" y="39.333333333333314" width="273" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9NJ-Sb-AQl">
+                                        <rect key="frame" x="0.0" y="44.333333333333314" width="273" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-Ek-Gst">
-                                        <rect key="frame" x="0.0" y="108.66666666666669" width="273" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="88.666666666666686" width="273" height="34.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-fw-Cpn">
-                                        <rect key="frame" x="0.0" y="153" width="273" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="128" width="273" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX4-z6-H89">
-                                        <rect key="frame" x="0.0" y="163" width="273" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="133" width="273" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Login">
                                             <color key="baseBackgroundColor" name="firstColor"/>
@@ -411,8 +515,10 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="LX4-z6-H89" id="Yqy-xU-AFE"/>
+                        <outlet property="nameField" destination="xnC-hw-w0I" id="Cve-vq-9SW"/>
                         <outlet property="repeatPasswordField" destination="b8l-fw-Cpn" id="Feh-EN-x8d"/>
                         <outlet property="segmentControl" destination="nds-KK-7cF" id="bny-k4-D5Z"/>
+                        <outlet property="surnameField" destination="7jx-oL-DrN" id="6X0-8P-HWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hN-El-wqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -434,10 +540,10 @@
             </objects>
             <point key="canvasLocation" x="2885" y="1525"/>
         </scene>
-        <!--AboutVC-->
+        <!--About DailyDigest-->
         <scene sceneID="cxw-pH-map">
             <objects>
-                <viewController storyboardIdentifier="AboutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dfc-u6-6bt" customClass="AboutVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutVC" title="About DailyDigest" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dfc-u6-6bt" customClass="AboutVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jfi-87-4cO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,6 +658,38 @@ Stay informed. Stay ahead with DailyDigest.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgl-ws-Fma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1121" y="741"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="iX6-jn-dHB">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" title="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iZh-9c-iNf" customClass="SearchVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pt6-y2-ALc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search news by keywords" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1LE-lX-Hdp">
+                                <rect key="frame" x="8" y="59" width="377" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iZh-9c-iNf" id="J94-dB-TG1"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gvB-Dg-ZmG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gvB-Dg-ZmG" firstAttribute="trailing" secondItem="1LE-lX-Hdp" secondAttribute="trailing" constant="8" id="IHq-Aa-0eU"/>
+                            <constraint firstItem="1LE-lX-Hdp" firstAttribute="leading" secondItem="gvB-Dg-ZmG" secondAttribute="leading" constant="8" id="gfJ-Vp-dye"/>
+                            <constraint firstItem="1LE-lX-Hdp" firstAttribute="top" secondItem="gvB-Dg-ZmG" secondAttribute="top" id="w2f-CW-5Qo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="1LE-lX-Hdp" id="Sgn-EA-pi2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCy-kI-1dK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-819.08396946564881" y="2236.6197183098593"/>
         </scene>
     </scenes>
     <resources>

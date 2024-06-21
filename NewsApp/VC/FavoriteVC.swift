@@ -8,21 +8,60 @@
 import UIKit
 
 class FavoriteVC: UIViewController {
-
+    
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
+    private var newsList: [News] = []
+    private var favoriteNewsList: [News] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        getFavoriteNews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Get news list
+    private func getData() {
+        let news = NewsData()
+        news.getNews(news: &newsList)
+        collectionView.reloadData()
     }
-    */
+    
+    //Get favorite news
+    private func getFavoriteNews() {
+        getData()
+        favoriteNewsList.removeAll()
+        
+        for news in newsList {
+            if news.isFavorite == true {
+                favoriteNewsList.append(news)
+            }
+        }
+    }
+}
 
+//CollectionView Settings
+extension FavoriteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        favoriteNewsList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCell", for: indexPath) as! FavoriteCell
+        let newsItem = favoriteNewsList[indexPath.row]
+        cell.newsHeader.text = newsItem.header
+        cell.newsText.text = newsItem.text
+        cell.newsImage.image = UIImage(named: newsItem.image ?? "")
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        .init(width: collectionView.frame.width, height: 240)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller =  storyboard?.instantiateViewController(withIdentifier: "NewsDetailVC") as! NewsDetailVC
+        controller.selectedNews = newsList[indexPath.row]
+        navigationController?.show(controller, sender: nil)
+    }
 }

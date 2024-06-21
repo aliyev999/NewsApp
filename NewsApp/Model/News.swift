@@ -13,5 +13,6 @@ struct News: Codable {
     let image: String?
     let date: String?
     let author: String?
+    let category: Category?
+    var isFavorite: Bool?
 }
-

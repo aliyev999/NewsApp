@@ -11,6 +11,5 @@ class AboutVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "About DailyDigest"
     }
 }

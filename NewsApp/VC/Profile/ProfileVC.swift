@@ -15,9 +15,7 @@ enum ProfileModel: String {
 class ProfileVC: UIViewController {
     
     @IBOutlet private weak var profileTable: UITableView!
-    private let loggedProfileMenu = [["Change password", "password"], ["Logout", "logout"], ["About", "about"]]
-    private let unloggedProfileMenu = [["Login", "login"], ["About", "about"]]
-    private var profileMenu: [[String]] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
