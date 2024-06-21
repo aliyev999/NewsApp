@@ -48,33 +48,4 @@ class NewsData {
             }
         }
     }
-    
-    func falseSelectedFavorite(news: News) {
-        // Получаем URL для директории Documents
-        if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            // Создаем URL для файла news.json в директории Documents
-            let fileURL = documentsDirectory.appendingPathComponent("\(fileName).json")
-            
-            do {
-                // Загружаем данные из файла
-                let data = try Data(contentsOf: fileURL)
-                var news = try JSONDecoder().decode([News].self, from: data)
-                
-                // Обновляем все новости, устанавливая isFavorite в false
-//                for index in news {
-//                    news.is.isFavorite = false
-//                }
-                
-                // Кодируем обновленные данные обратно в JSON
-                let updatedData = try JSONEncoder().encode(news)
-                
-                // Записываем обновленные данные в файл в директории Documents
-                try updatedData.write(to: fileURL, options: .atomic)
-                print("Файл успешно обновлен: \(fileURL)")
-            } catch {
-                print("Ошибка при обновлении файла: \(error.localizedDescription)")
-            }
-        }
-    }
 }
-

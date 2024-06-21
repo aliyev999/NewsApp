@@ -86,7 +86,6 @@ extension NewsDetailVC {
                 addStarFillButton()
             } else if image == UIImage(systemName: "star.fill") {
                 addStarButton()
-
             }
         }
     }

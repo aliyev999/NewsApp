@@ -674,16 +674,95 @@ Stay informed. Stay ahead with DailyDigest.
                                     <outlet property="delegate" destination="iZh-9c-iNf" id="J94-dB-TG1"/>
                                 </connections>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cJp-N6-s4v">
+                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iCc-cd-KNo">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCell" id="Ido-dm-zJ8" customClass="SearchCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="248"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qcc-YL-QNP">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="248"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newss" translatesAutoresizingMaskIntoConstraints="NO" id="6rc-wb-Bue">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="98" id="Bub-e8-4UU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto investors should be prepared to lose all their money, BOE governor says" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pT6-J8-qni">
+                                                    <rect key="frame" x="12" y="106" width="369" height="20.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.333333333333329" id="tAm-7e-0Ui"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOU-BK-N4k">
+                                                    <rect key="frame" x="12" y="134.33333333333334" width="369" height="40.666666666666657"/>
+                                                    <string key="text">LONDON — Cryptocurrencies “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said. Digital currencies like bitcoin, ether and even dogecoin have been on a tear this year, reminding some investors of the 2017 crypto bubble in which bitcoin blasted toward</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-2k-wZ7">
+                                                    <rect key="frame" x="12" y="183" width="361" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="firstColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pT6-J8-qni" secondAttribute="trailing" constant="12" id="1bA-jt-3Yu"/>
+                                                <constraint firstItem="1Ig-2k-wZ7" firstAttribute="top" secondItem="yOU-BK-N4k" secondAttribute="bottom" constant="8" symbolic="YES" id="4va-ud-bXs"/>
+                                                <constraint firstItem="6rc-wb-Bue" firstAttribute="top" secondItem="qcc-YL-QNP" secondAttribute="top" id="BkI-vM-OUm"/>
+                                                <constraint firstItem="yOU-BK-N4k" firstAttribute="leading" secondItem="qcc-YL-QNP" secondAttribute="leading" constant="12" id="KdT-6Z-cFM"/>
+                                                <constraint firstItem="6rc-wb-Bue" firstAttribute="leading" secondItem="qcc-YL-QNP" secondAttribute="leading" id="MF3-fh-P9A"/>
+                                                <constraint firstAttribute="trailing" secondItem="yOU-BK-N4k" secondAttribute="trailing" constant="12" id="UWB-XO-YJ0"/>
+                                                <constraint firstAttribute="trailing" secondItem="6rc-wb-Bue" secondAttribute="trailing" id="ZV5-kk-8FT"/>
+                                                <constraint firstItem="pT6-J8-qni" firstAttribute="top" secondItem="6rc-wb-Bue" secondAttribute="bottom" constant="8" symbolic="YES" id="aOj-yo-wyl"/>
+                                                <constraint firstItem="1Ig-2k-wZ7" firstAttribute="leading" secondItem="qcc-YL-QNP" secondAttribute="leading" constant="12" id="eJ0-vT-Ad6"/>
+                                                <constraint firstItem="pT6-J8-qni" firstAttribute="leading" secondItem="qcc-YL-QNP" secondAttribute="leading" constant="12" id="ess-Q7-nEX"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Ig-2k-wZ7" secondAttribute="trailing" constant="20" symbolic="YES" id="oCs-qg-AKv"/>
+                                                <constraint firstItem="yOU-BK-N4k" firstAttribute="top" secondItem="pT6-J8-qni" secondAttribute="bottom" constant="8" id="pu3-Y3-WTF"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="248"/>
+                                        <connections>
+                                            <outlet property="newsHeader" destination="pT6-J8-qni" id="ql4-uB-NCv"/>
+                                            <outlet property="newsImage" destination="6rc-wb-Bue" id="wzJ-cb-Rr2"/>
+                                            <outlet property="newsText" destination="yOU-BK-N4k" id="xKq-bD-MeW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="iZh-9c-iNf" id="hv3-Y1-iZT"/>
+                                    <outlet property="delegate" destination="iZh-9c-iNf" id="XPQ-jm-CJ1"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gvB-Dg-ZmG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cJp-N6-s4v" firstAttribute="top" secondItem="1LE-lX-Hdp" secondAttribute="bottom" id="7nS-xo-t9a"/>
                             <constraint firstItem="gvB-Dg-ZmG" firstAttribute="trailing" secondItem="1LE-lX-Hdp" secondAttribute="trailing" constant="8" id="IHq-Aa-0eU"/>
+                            <constraint firstItem="cJp-N6-s4v" firstAttribute="bottom" secondItem="gvB-Dg-ZmG" secondAttribute="bottom" id="XCE-Ou-cf4"/>
                             <constraint firstItem="1LE-lX-Hdp" firstAttribute="leading" secondItem="gvB-Dg-ZmG" secondAttribute="leading" constant="8" id="gfJ-Vp-dye"/>
+                            <constraint firstItem="cJp-N6-s4v" firstAttribute="leading" secondItem="gvB-Dg-ZmG" secondAttribute="leading" id="ldM-Pg-cHj"/>
+                            <constraint firstAttribute="trailing" secondItem="cJp-N6-s4v" secondAttribute="trailing" id="sTl-KX-I5R"/>
                             <constraint firstItem="1LE-lX-Hdp" firstAttribute="top" secondItem="gvB-Dg-ZmG" secondAttribute="top" id="w2f-CW-5Qo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="cJp-N6-s4v" id="6Xu-Ed-tdY"/>
                         <outlet property="searchBar" destination="1LE-lX-Hdp" id="Sgn-EA-pi2"/>
                     </connections>
                 </viewController>
