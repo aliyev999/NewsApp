@@ -87,12 +87,14 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             if let controller = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC {
                 navigationController?.show(controller, sender: nil)
             }
+            configure()
         case .logout:
             removeData()
-            let scene = UIApplication.shared.connectedScenes.first
-            if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
-                sceneDelegate.HomeVC()
-            }
+//            let scene = UIApplication.shared.connectedScenes.first
+//            if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
+//                sceneDelegate.HomeVC()
+//            }
+            configure()
         case .changePassword:
             if let controller = storyboard?.instantiateViewController(withIdentifier: "PasswordChangeVC") as? PasswordChangeVC {
                 navigationController?.show(controller, sender: nil)

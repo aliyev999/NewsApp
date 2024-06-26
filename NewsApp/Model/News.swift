@@ -8,6 +8,7 @@
 import Foundation
 
 struct News: Codable {
+    let id: String? // Assuming each news item has a unique ID.
     let header: String?
     let text: String?
     let image: String?

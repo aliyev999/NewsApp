@@ -45,7 +45,7 @@ class PasswordChangeVC: UIViewController {
             return
         }
         
-        userData.updateUser(loggedInUserID, newPassword: newPassword)
+        userData.updateUser(userId: loggedInUserID, newPassword: newPassword)
         
         successAction()
         clearFields()

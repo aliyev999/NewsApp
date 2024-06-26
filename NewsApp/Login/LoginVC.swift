@@ -23,6 +23,14 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     // Hides textfields in login and register
     private func isHidden() {
         repeatPasswordField.isHidden.toggle()
@@ -65,10 +73,10 @@ extension LoginVC {
                 let scene = UIApplication.shared.connectedScenes.first
                 if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
                     sceneDelegate.HomeVC()
-                }            } else {
-                    showError(message: "Login failed. Invalid credentials.")
                 }
-            
+            } else {
+                showError(message: "Login failed. Invalid credentials.")
+            }
         } else if segmentControl.selectedSegmentIndex == 1 {
             guard let name = nameField.text, !name.isEmpty,
                   let surname = surnameField.text, !surname.isEmpty,

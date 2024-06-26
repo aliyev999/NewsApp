@@ -438,16 +438,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W5r-F8-xSF">
-                                <rect key="frame" x="78" y="99" width="237" height="106"/>
+                                <rect key="frame" x="79.333333333333329" y="99" width="234.66666666666669" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DailyDigest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-NL-RKx">
-                                        <rect key="frame" x="0.0" y="0.0" width="237" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                         <color key="textColor" name="firstColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Informed, Stay Ahead." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arN-gz-x4i">
-                                        <rect key="frame" x="0.0" y="58" width="237" height="48"/>
+                                        <rect key="frame" x="0.0" y="58" width="234.66666666666666" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                                         <color key="textColor" name="firstColor"/>
                                         <nil key="highlightedColor"/>
@@ -508,12 +508,12 @@
                         <viewLayoutGuide key="safeArea" id="Gvj-NP-VYu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yTg-xU-2Xf" firstAttribute="leading" secondItem="Gvj-NP-VYu" secondAttribute="leading" constant="60" id="Otk-C6-CyJ"/>
+                            <constraint firstItem="yTg-xU-2Xf" firstAttribute="centerX" secondItem="Gvj-NP-VYu" secondAttribute="centerX" id="Aop-yX-wr5"/>
                             <constraint firstItem="W5r-F8-xSF" firstAttribute="top" secondItem="Gvj-NP-VYu" secondAttribute="top" constant="40" id="TUK-ID-F21"/>
-                            <constraint firstItem="W5r-F8-xSF" firstAttribute="leading" secondItem="Gvj-NP-VYu" secondAttribute="leading" constant="78" id="YgR-bI-WRE"/>
+                            <constraint firstItem="yTg-xU-2Xf" firstAttribute="width" secondItem="s87-jg-HaC" secondAttribute="width" multiplier="0.694656" id="TYb-FY-crv"/>
+                            <constraint firstItem="W5r-F8-xSF" firstAttribute="centerX" secondItem="Gvj-NP-VYu" secondAttribute="centerX" id="WNi-pA-qsc"/>
                             <constraint firstItem="yTg-xU-2Xf" firstAttribute="top" secondItem="W5r-F8-xSF" secondAttribute="bottom" constant="40" id="cVA-BM-Pej"/>
-                            <constraint firstItem="Gvj-NP-VYu" firstAttribute="trailing" secondItem="W5r-F8-xSF" secondAttribute="trailing" constant="78" id="hDY-il-zYK"/>
-                            <constraint firstItem="Gvj-NP-VYu" firstAttribute="trailing" secondItem="yTg-xU-2Xf" secondAttribute="trailing" constant="60" id="wm8-bI-aI0"/>
+                            <constraint firstItem="W5r-F8-xSF" firstAttribute="width" secondItem="s87-jg-HaC" secondAttribute="width" multiplier="0.597116" id="wmM-ZI-rsz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -816,7 +816,7 @@ Stay informed. Stay ahead with DailyDigest.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCy-kI-1dK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-819.08396946564881" y="2236.6197183098593"/>
+            <point key="canvasLocation" x="-819" y="2195"/>
         </scene>
     </scenes>
     <resources>

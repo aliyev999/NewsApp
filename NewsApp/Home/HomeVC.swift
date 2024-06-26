@@ -92,7 +92,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller =  storyboard?.instantiateViewController(withIdentifier: "NewsDetailVC") as! NewsDetailVC
         controller.selectedNews = viewModel.newsList[indexPath.row]
-        controller.indexNews = indexPath.row
         navigationController?.show(controller, sender: nil)
     }
     

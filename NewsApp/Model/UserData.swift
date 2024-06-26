@@ -1,12 +1,4 @@
-//
-//  UserData.swift
-//  NewsApp
-//
-//  Created by AS on 25.06.2024.
-//
-
 import Foundation
-
 class UserData {
     private let fileName = "users.json"
     private var users: [User] = []
@@ -18,4 +10,55 @@ class UserData {
         }
         return url.appendingPathComponent(fileName)
     }
+    
+    // Function to load users from a local JSON file
+    func loadUsers() {
+        let fileURL = getUsersFileURL()
+        guard let url = fileURL else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            users = try JSONDecoder().decode([User].self, from: data)
+        } catch {
+            print("Error loading users: \(error)")
+        }
+    }
+    
+    // Function to add a new user
+    func addUser(user: User) {
+        users.append(user)
+        saveUsers()
+    }
+    
+    // Function to save users to a local JSON file
+    private func saveUsers() {
+        let fileURL = getUsersFileURL()
+        guard let url = fileURL else { return }
+        
+        do {
+            let data = try JSONEncoder().encode(users)
+            try data.write(to: url, options: .atomic)
+        } catch {
+            print("Error saving users: \(error)")
+        }
+    }
+    
+    // Function to get all users
+    func getAllUsers() -> [User] {
+        return users
+    }
+    
+    // Function to check if a news is favorited by a user
+    func isFavorite(userId: String, newsId: String) -> Bool {
+        // Here you should implement the logic to check if a particular news item is favorited by the user
+        // This will likely involve checking a user's list of favorite news items
+        return false
+    }
+    
+    func updateUser(userId: String, newPassword: String) {
+            if let index = users.firstIndex(where: { $0.id == userId }) {
+                users[index].password = newPassword
+                saveUsers()
+            }
+        }
 }
