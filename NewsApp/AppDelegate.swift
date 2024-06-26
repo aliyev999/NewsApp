@@ -14,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
 
+        UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().prefersLargeTitles = true
         UINavigationBar.appearance().tintColor = UIColor(named: "firstColor")
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -UIScreen.main.bounds.width * 2, vertical: 0), for: .default)

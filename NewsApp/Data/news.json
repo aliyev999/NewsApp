@@ -5,8 +5,7 @@
         "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
-        "category": "World",
-        "isFavorite": true
+        "category": "World"
     },
     {
         "header": "Amazon Is Fined Nearly $6 Million Over Warehouse Work Quotas",
@@ -14,8 +13,7 @@
         "image": "6fe741a8-1f83-4fda-8c3d-89817e12d2f8",
         "date": "18 June",
         "author": "Noam Scheiber",
-        "category": "Business",
-        "isFavorite": true
+        "category": "Business"
     },
     {
         "header": "You Talkin’ Like Him? A Convention Lets De Niro Fans Get In on the Act.",
@@ -23,8 +21,7 @@
         "image": "b31e6cf5-2ceb-42f4-b72d-d014087f8303",
         "date": "18 June",
         "author": "Sarah Goodman",
-        "category": "Arts",
-        "isFavorite": false
+        "category": "Arts"
     },
     {
         "header": "Trump Isn’t Choosing a Running Mate. He’s Casting a Co-Star.",
@@ -32,8 +29,7 @@
         "image": "6df358bb-bb8b-41de-b7d8-e2cdf49809a0",
         "date": "17 May",
         "author": "Ramin Setoodeh",
-        "category": "Politics",
-        "isFavorite": false
+        "category": "Politics"
     },
     {
         "header": "How Big Tech Is Killing Innovation",
@@ -41,8 +37,7 @@
         "image": "b7625680-a2b4-4d85-9acb-7255ac063052",
         "date": "13 June",
         "author": "Mark Lemley and Matt Wansley",
-        "category": "Technology",
-        "isFavorite": false
+        "category": "Technology"
     },
     {
         "header": "A.I. Is Coming for the Past, Too",
@@ -50,8 +45,47 @@
         "image": "e508c632-8aa1-463f-a42c-b29f893b8333",
         "date": "24 January",
         "author": "Jacob N. Shapiro and Chris Mattmann",
-        "category": "Technology",
-        "isFavorite": false
+        "category": "Technology"
+    },
+    {
+        "header": "The Capital of Women’s Soccer",
+        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
+        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
+        "date": "24 May",
+        "author": "Rory Smith and María Garrido",
+        "category": "Health"
+    },
+    {
+        "header": "Well Beyond the U.S., Heat and Climate Extremes Are Hitting Billions",
+        "text": "Poll workers. Pilgrims. Tourists on a hike. All have died in blistering heat in recent weeks around the world, a harrowing reminder of the global dangers of extreme weather as a heat wave bears down on nearly 100 million Americans this week. Dozens of cities in Mexico broke heat records in May and June, killing more than 100 people. India has been under an extraordinarily long heat wave that killed several election workers, and this week, in the capital, Delhi, even overnight temperatures remained in the mid-90s Fahrenheit, or in the mid-30s Celsius. Greece is bracing for wildfires this week, right after back-to-back heat waves killed several tourists. In Bamako, the capital of Mali, hospitals reported more than 100 excess deaths on the first four days of April, The Associated Press reported. Between May 2023 and May 2024, an estimated 6.3 billion people, or roughly 4 out of 5 people in the world, lived through at least a month of what in their areas were considered abnormally high temperatures, according to a recent analysis by Climate Central, a scientific nonprofit. The damage to human health, agriculture and the global economy is just beginning to be understood. Extreme heat killed an estimated 489,000 people annually between 2000 and 2019, according to the World Meteorological Organization, making heat the deadliest of all extreme weather events. Swiss RE, the insurance-industry giant, said in a report this week that the accumulating hazards of climate change could further drive the growing market for insurance against strikes and riots. “Climate change may also drive food and water shortages and in turn civil unrest, and mass migration,” the report said. As for the world’s two rival economic powers, China and the United States, both face a common peril this summer. As one-fifth of all Americans were under an extreme-heat alert this week, several areas in China’s north broke maximum temperature records. And earlier in the week the capital, Beijing, was under a heat alert as temperatures reached 99 degrees Fahrenheit (37 degrees Celsius). The two countries are also the two biggest producers of greenhouse gases warming the planet. China’s current emissions are by far the highest in the world, and the United States’ cumulative emissions over the past 150 years of industrialization are the highest in the world.",
+        "image": "330a738d-35ed-4f80-be7c-da3774e4cdb9",
+        "date": "24 May",
+        "author": "Rory Smith and María Garrido",
+        "category": "World"
+    },
+    {
+        "header": "260 McNuggets? McDonald’s Ends A.I. Drive-Through Tests Amid Errors",
+        "text": "In the nearly three years since McDonald’s announced that it was partnering with IBM to develop a drive-through order taker powered by artificial intelligence, videos popped up on social media showing confused and frustrated customers trying to correct comically inaccurate meals. “Stop! Stop! Stop!” two friends screamed with humorous anguish on a TikTok video as an A.I. drive-through misunderstands their order, tallying up 240, 250 and then 260 Chicken McNuggets. In other videos, the A.I. rings up a customer for nine iced teas instead of one, fails to explain why a customer could not order Mountain Dew and thought another wanted to add bacon to his ice cream. So when McDonald’s announced in a June 13 internal email, obtained by the trade publication Restaurant Business, that it was ending its partnership with IBM and shutting down its A.I. tests at more than 100 U.S. drive-throughs, customers who had interacted with the service were probably not shocked. The decision to abandon the IBM deal comes as many other businesses, including its competitors, are investing in A.I. But it exemplifies some of the challenges companies are facing as they jockey to unlock the revolutionary technology’s potential. Other fast-food companies have had success with A.I. ordering. Last year, Wendy’s formed a partnership with Google Cloud to build out its A.I. drive-through system. Carl’s Jr. and Taco John’s have hired Presto, a voice A.I. firm for restaurants. Panda Express has approximately 30 automated order takers at its windows through a partnership with the voice A.I. firm SoundHound AI.",
+        "image": "4964343e-f42c-47c4-955e-e4a4d74a920c",
+        "date": "21 June",
+        "author": "Hank Sanders",
+        "category": "Business"
+    },
+    {
+        "header": "The Capital of Women’s Soccer",
+        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
+        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
+        "date": "24 May",
+        "author": "Rory Smith and María Garrido",
+        "category": "Health"
+    },
+    {
+        "header": "The Capital of Women’s Soccer",
+        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
+        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
+        "date": "24 May",
+        "author": "Rory Smith and María Garrido",
+        "category": "Health"
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -60,7 +94,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -69,7 +102,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -78,7 +110,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -87,7 +118,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -96,7 +126,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -105,7 +134,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -114,7 +142,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -123,7 +150,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -132,7 +158,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -141,7 +166,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -150,7 +174,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -159,7 +182,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -168,7 +190,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -177,7 +198,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -186,7 +206,6 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
     },
     {
         "header": "The Capital of Women’s Soccer",
@@ -195,88 +214,5 @@
         "date": "24 May",
         "author": "Rory Smith and María Garrido",
         "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    {
-        "header": "The Capital of Women’s Soccer",
-        "text": "A little more than an hour before the game begins, the gates outside the Johan Cruyff Stadium swing open and a thousand or so fans rush inside. Some scurry to the turnstiles. Others wait patiently at the merchandise stalls, anxious to buy a jersey, a scarf, a commemorative trinket. The busiest and longest line, though, forms outside a booth offering fans the chance to have a photo taken with their heroes. Within a couple of minutes, it snakes all the way back to the entrance, populated by doting parents and spellbound preteens hoping they arrived in time. They have come to see the most dominant women’s soccer team on the planet. Barcelona Femení has been Spanish champion every year since 2019. It has not lost a league game since last May, a run during which eight of its players also lifted the Women’s World Cup. On Saturday, the team can win its third Women’s Champions League title, which crowns the best professional team in Europe, in four seasons. That success has turned the team’s standouts into global stars and the club into what often seems like a juggernaut. It has also transformed Barcelona, and the broader region of Catalonia, into the global heartbeat of women’s soccer, a case study in what happens when the women’s game wins the same prominence as the men’s.",
-        "image": "699fbf31-126a-4bba-a65b-aef69e6387fc",
-        "date": "24 May",
-        "author": "Rory Smith and María Garrido",
-        "category": "Health",
-        "isFavorite": false
-    },
-    
+    }
 ]

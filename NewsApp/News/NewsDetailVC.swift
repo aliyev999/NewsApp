@@ -18,6 +18,8 @@ class NewsDetailVC: UIViewController {
     @IBOutlet private weak var category: UILabel!
     
     var selectedNews: News?
+    var indexNew = 0
+    let newsData = NewsData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +55,13 @@ class NewsDetailVC: UIViewController {
     
     //Check favorite news
     private func isFavorite() {
-        if selectedNews?.isFavorite == true {
+        guard let newsId = selectedNews?.id else {
+            addStarButton() // Если id не установлен, считаем новость неизбранной
+            return
+        }
+        
+        let newsData = NewsData()
+        if newsData.isFavorite(newsId) {
             addStarFillButton()
         } else {
             addStarButton()
@@ -80,13 +88,29 @@ extension NewsDetailVC {
     //Favorite button action
     @objc
     private func starButtonTapped() {
-        let news = NewsData()
-        if let image = navigationItem.rightBarButtonItem?.image {
-            if image == UIImage(systemName: "star") {
-                addStarFillButton()
-            } else if image == UIImage(systemName: "star.fill") {
-                addStarButton()
-            }
+        guard let selectedNews = selectedNews,
+              let userId = UserDefaults.standard.string(forKey: "userId") else {
+            return
+        }
+        
+        newsData.addFavoritesNews(userId: userId, news: selectedNews)
+        updateStarButtonAppearance()
+    }
+    
+    private func updateStarButtonAppearance() {
+        guard let selectedNews = selectedNews,
+              let userId = UserDefaults.standard.string(forKey: "userId") else {
+            addStarButton() // По умолчанию показываем пустую звезду
+            return
+        }
+        
+        if newsData.isFavorite(userId: userId, newsId: indexNews ?? "") {
+            addStarFillButton()
+        } else {
+            addStarButton()
         }
     }
+    
 }
+
+

@@ -13,7 +13,7 @@
         <!--News-->
         <scene sceneID="Rrc-rk-hR9">
             <objects>
-                <viewController id="6GG-yJ-C2U" customClass="HomeVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6GG-yJ-C2U" customClass="HomeVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="URe-3l-74b">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -361,7 +361,7 @@
         <!--ProfileVC-->
         <scene sceneID="hEv-C0-4HJ">
             <objects>
-                <viewController id="RpO-kT-FIb" customClass="ProfileVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RpO-kT-FIb" customClass="ProfileVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6aw-a9-RWC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,7 +490,7 @@
                                     <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-fw-Cpn">
                                         <rect key="frame" x="0.0" y="128" width="273" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX4-z6-H89">
                                         <rect key="frame" x="0.0" y="133" width="273" height="34.333333333333343"/>
@@ -498,6 +498,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Login">
                                             <color key="baseBackgroundColor" name="firstColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="bTH-6A-O0Q" eventType="touchUpInside" id="UgE-mb-t3r"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -515,7 +518,9 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="LX4-z6-H89" id="Yqy-xU-AFE"/>
+                        <outlet property="emailField" destination="9NJ-Sb-AQl" id="FK5-xk-zwc"/>
                         <outlet property="nameField" destination="xnC-hw-w0I" id="Cve-vq-9SW"/>
+                        <outlet property="passwordField" destination="UPH-Ek-Gst" id="ejZ-tN-7m4"/>
                         <outlet property="repeatPasswordField" destination="b8l-fw-Cpn" id="Feh-EN-x8d"/>
                         <outlet property="segmentControl" destination="nds-KK-7cF" id="bny-k4-D5Z"/>
                         <outlet property="surnameField" destination="7jx-oL-DrN" id="6X0-8P-HWh"/>
@@ -525,25 +530,68 @@
             </objects>
             <point key="canvasLocation" x="2029.7709923664122" y="1524.6478873239437"/>
         </scene>
-        <!--Password ChangeVC-->
+        <!--Change Password-->
         <scene sceneID="SGd-nD-XKg">
             <objects>
-                <viewController storyboardIdentifier="PasswordChangeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J3W-Lr-Qy0" customClass="PasswordChangeVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordChangeVC" title="Change Password" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J3W-Lr-Qy0" customClass="PasswordChangeVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ELy-fb-5mR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="aWN-RG-T7v">
+                                <rect key="frame" x="60" y="99.000000000000014" width="273" height="178.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLr-em-Iqs">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onf-WL-G1C">
+                                        <rect key="frame" x="0.0" y="48" width="273" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verfiy new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pIz-7r-tgk">
+                                        <rect key="frame" x="0.0" y="96" width="273" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-Id-pL7">
+                                        <rect key="frame" x="0.0" y="144" width="273" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Change password">
+                                            <color key="baseBackgroundColor" name="firstColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="bTH-6A-O0Q" eventType="touchUpInside" id="jlH-7C-tDI"/>
+                                            <action selector="changePasswordTapped:" destination="J3W-Lr-Qy0" eventType="touchUpInside" id="JqL-8C-t7p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="njD-zr-ri2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="njD-zr-ri2" firstAttribute="trailing" secondItem="aWN-RG-T7v" secondAttribute="trailing" constant="60" id="G5P-i5-is1"/>
+                            <constraint firstItem="aWN-RG-T7v" firstAttribute="leading" secondItem="njD-zr-ri2" secondAttribute="leading" constant="60" id="QvO-NB-ifa"/>
+                            <constraint firstItem="aWN-RG-T7v" firstAttribute="top" secondItem="njD-zr-ri2" secondAttribute="top" constant="40" id="YLD-lE-0MK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentPassword" destination="lLr-em-Iqs" id="pJq-vZ-Wnn"/>
+                        <outlet property="newPassword" destination="onf-WL-G1C" id="rfD-ML-33V"/>
+                        <outlet property="repeatNewPassword" destination="pIz-7r-tgk" id="UVz-cb-4Nh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuu-ep-Q3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2885" y="1525"/>
         </scene>
-        <!--About DailyDigest-->
+        <!--AboutVC-->
         <scene sceneID="cxw-pH-map">
             <objects>
-                <viewController storyboardIdentifier="AboutVC" title="About DailyDigest" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dfc-u6-6bt" customClass="AboutVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dfc-u6-6bt" customClass="AboutVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jfi-87-4cO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,7 +632,7 @@ Stay informed. Stay ahead with DailyDigest.
         <!--Tab Bar Controller-->
         <scene sceneID="uP0-Ze-3W5">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EUq-Jy-bOv" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EUq-Jy-bOv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oHV-fI-Iao">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -605,7 +653,7 @@ Stay informed. Stay ahead with DailyDigest.
         <!--Home-->
         <scene sceneID="Dd0-ge-apk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JV8-nx-whO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JV8-nx-whO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="394-cL-Md3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oiz-3c-WF6">
@@ -643,7 +691,7 @@ Stay informed. Stay ahead with DailyDigest.
         <!--Profile-->
         <scene sceneID="nbd-C1-XeP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EPw-ue-yYO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="profileNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EPw-ue-yYO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="HLw-tF-i8f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V0c-Eh-0aH">

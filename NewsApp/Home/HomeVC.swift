@@ -13,7 +13,7 @@ class HomeVC: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewContraint: NSLayoutConstraint!
     
-    private var newsList: [News] = []
+    private let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,12 @@ class HomeVC: UIViewController {
         updateDateLabelVisibility()
         addSearchButton()
         getDate()
-        getData()
+        
+        viewModel.callback = {
+            self.collectionView.reloadData()
+        }
+        
+        viewModel.getData()
     }
     
     //Hides current date on scroll
@@ -37,15 +42,7 @@ class HomeVC: UIViewController {
         } else {
             collectionViewContraint.constant = 32
         }
-        
         view.layoutIfNeeded()
-    }
-    
-    //Get news list
-    private func getData() {
-        let news = NewsData()
-        news.getNews(news: &newsList)
-        collectionView.reloadData()
     }
     
     //Navbar search button
@@ -76,12 +73,12 @@ class HomeVC: UIViewController {
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        newsList.count
+        viewModel.newsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as! NewsCell
-        let newsItem = newsList[indexPath.row]
+        let newsItem = viewModel.newsList[indexPath.row]
         cell.newsHeader.text = newsItem.header
         cell.newsText.text = newsItem.text
         cell.newsImage.image = UIImage(named: newsItem.image ?? "")
@@ -94,9 +91,9 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller =  storyboard?.instantiateViewController(withIdentifier: "NewsDetailVC") as! NewsDetailVC
-        controller.selectedNews = newsList[indexPath.row]
+        controller.selectedNews = viewModel.newsList[indexPath.row]
+        controller.indexNews = indexPath.row
         navigationController?.show(controller, sender: nil)
-        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

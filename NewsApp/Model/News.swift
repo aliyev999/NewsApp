@@ -14,5 +14,4 @@ struct News: Codable {
     let date: String?
     let author: String?
     let category: Category?
-    var isFavorite: Bool?
 }

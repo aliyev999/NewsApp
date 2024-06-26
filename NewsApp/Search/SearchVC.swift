@@ -12,9 +12,9 @@ class SearchVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var searchBar: UISearchBar!
     
-    private var searchResult: String?
-    private var newsList: [News] = []
-    private var filteredNewsList: [News] = []
+    var searchResult: String?
+    var newsList: [News] = []
+    var filteredNewsList: [News] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,7 @@ class SearchVC: UIViewController {
     private func searchBarConfigure() {
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
+        searchBar.tintColor = UIColor(named: "firstColor")
     }
     
     private func getData() {
@@ -43,10 +44,13 @@ extension SearchVC: UISearchBarDelegate {
         if searchText.isEmpty {
             filteredNewsList = []
         } else {
-            //Sual
-            filteredNewsList = newsList.filter { $0.header!.lowercased().contains(searchText.lowercased()) }
+            filteredNewsList = newsList.filter {
+                guard $0.header != nil else {
+                    return false
+                }
+                return $0.header!.lowercased().contains(searchText.lowercased())
+            }
         }
-        
         //CollectionView Search animation
         collectionView.performBatchUpdates({
             collectionView.reloadSections(IndexSet(integer: 0))

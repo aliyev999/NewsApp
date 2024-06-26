@@ -16,27 +16,18 @@ class FavoriteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getFavoriteNews()
     }
     
     //Get news list
     private func getData() {
-        let news = NewsData()
-        news.getNews(news: &newsList)
+        _ = NewsData()
+        //news.getNews(news: &newsList)
+        //newsList = news.loadArticlesFromJSON()!
         collectionView.reloadData()
     }
     
     //Get favorite news
-    private func getFavoriteNews() {
-        getData()
-        favoriteNewsList.removeAll()
-        
-        for news in newsList {
-            if news.isFavorite == true {
-                favoriteNewsList.append(news)
-            }
-        }
-    }
+    
 }
 
 //CollectionView Settings
