@@ -1,4 +1,5 @@
 import Foundation
+
 class UserData {
     private let fileName = "users.json"
     private var users: [User] = []
@@ -46,13 +47,6 @@ class UserData {
     // Function to get all users
     func getAllUsers() -> [User] {
         return users
-    }
-    
-    // Function to check if a news is favorited by a user
-    func isFavorite(userId: String, newsId: String) -> Bool {
-        // Here you should implement the logic to check if a particular news item is favorited by the user
-        // This will likely involve checking a user's list of favorite news items
-        return false
     }
     
     func updateUser(userId: String, newPassword: String) {

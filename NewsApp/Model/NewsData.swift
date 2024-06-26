@@ -16,7 +16,5 @@ class NewsData {
         } else {
             print("News JSON file not found.")
         }
-    }
-    
-    
+    }    
 }

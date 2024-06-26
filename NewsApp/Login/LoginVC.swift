@@ -1,10 +1,3 @@
-//
-//  LoginVC.swift
-//  NewsApp
-//
-//  Created by AS on 16.06.24.
-//
-
 import UIKit
 
 class LoginVC: UIViewController {
@@ -16,19 +9,36 @@ class LoginVC: UIViewController {
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var repeatPasswordField: UITextField!
     @IBOutlet private weak var actionButton: UIButton!
-    
     private let userData = UserData()
+    
+    private let activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.color = UIColor(named: "firstColor")
+        indicator.backgroundColor =  UIColor(white: 2, alpha: 0.7)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setupUI() {
+        view.addSubview(activityIndicator)
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        activityIndicator.hidesWhenStopped = true
     }
     
     // Hides textfields in login and register
@@ -54,6 +64,14 @@ class LoginVC: UIViewController {
         UserDefaults.standard.setValue(true, forKey: "loggedIn")
         UserDefaults.standard.setValue(id, forKey: "loggedInUserID")
     }
+    
+    private func startLoading() {
+        activityIndicator.startAnimating()
+    }
+    
+    private func stopLoading() {
+        activityIndicator.stopAnimating()
+    }
 }
 
 // ActionButton & SegmentControl
@@ -68,14 +86,24 @@ extension LoginVC {
                 return
             }
             
-            if let user = userData.getAllUsers().first(where: { $0.email == email && $0.password == password }) {
-                setData(id: user.id ?? "")
-                let scene = UIApplication.shared.connectedScenes.first
-                if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
-                    sceneDelegate.HomeVC()
+            startLoading()
+            DispatchQueue.global().async {
+                // Simulate login process
+                if let user = self.userData.getAllUsers().first(where: { $0.email == email && $0.password == password }) {
+                    self.setData(id: user.id ?? "")
+                    DispatchQueue.main.async {
+                        self.stopLoading()
+                        let scene = UIApplication.shared.connectedScenes.first
+                        if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
+                            sceneDelegate.HomeVC()
+                        }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.stopLoading()
+                        self.showError(message: "Login failed. Invalid credentials.")
+                    }
                 }
-            } else {
-                showError(message: "Login failed. Invalid credentials.")
             }
         } else if segmentControl.selectedSegmentIndex == 1 {
             guard let name = nameField.text, !name.isEmpty,
@@ -97,12 +125,17 @@ extension LoginVC {
                 return
             }
             
-            // Create user
-            let newUser = User(id: UUID().uuidString, name: name, surname: surname, email: email, password: password)
-            userData.addUser(user: newUser)
-            setData(id: newUser.id ?? "")
-            
-            clearFields()
+            startLoading()
+            DispatchQueue.global().async {
+                // Simulate registration process
+                let newUser = User(id: UUID().uuidString, name: name, surname: surname, email: email, password: password)
+                self.userData.addUser(user: newUser)
+                self.setData(id: newUser.id ?? "")
+                DispatchQueue.main.async {
+                    self.stopLoading()
+                    self.clearFields()
+                }
+            }
         }
     }
     
@@ -119,10 +152,12 @@ extension LoginVC {
         case 0:
             isHidden()
             clearFields()
+            emailField.becomeFirstResponder()
             actionButton.setTitle("Login", for: .normal)
         case 1:
             isHidden()
             clearFields()
+            nameField.becomeFirstResponder()
             actionButton.setTitle("Register", for: .normal)
         default:
             break
