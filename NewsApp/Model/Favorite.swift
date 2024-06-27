@@ -8,6 +8,6 @@
 import Foundation
 
 struct Favorite: Codable {
-    let id: String?
-    let news: [Int]
+    var id: String?
+    var news: [String]
 }

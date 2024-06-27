@@ -1,10 +1,3 @@
-//
-//  NewsDetailVC.swift
-//  NewsApp
-//
-//  Created by AS on 08.06.24.
-//
-
 import UIKit
 
 class NewsDetailVC: UIViewController {
@@ -17,7 +10,6 @@ class NewsDetailVC: UIViewController {
     @IBOutlet private weak var author: UILabel!
     @IBOutlet private weak var category: UILabel!
     
-    
     var selectedNews: News?
     let newsData = NewsData()
     
@@ -26,11 +18,16 @@ class NewsDetailVC: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateStarButtonAppearance()
+        print(newsData.getFavorites())
+    }
+    
     private func setupUI() {
         addStarButton()
         readingTimeLabel.text = "\(calculateReadingTime(for: textView.text, wordsPerMinute: 200)) min"
         currentNews()
-        isFavorite()
     }
     
     private func currentNews() {
@@ -38,7 +35,7 @@ class NewsDetailVC: UIViewController {
         header.text = selectedNews?.header
         date.text = selectedNews?.date
         if let currentAuthor = selectedNews?.author {
-            author.text = "Published by \(currentAuthor)"
+            author.text = "Published by: \(currentAuthor)"
         }
         image.image = UIImage(named: selectedNews?.image ?? "")
         category.text = selectedNews?.category?.rawValue
@@ -50,42 +47,37 @@ class NewsDetailVC: UIViewController {
         return Int(ceil(Double(wordCount) / Double(wordsPerMinute)))
     }
     
-    private func isFavorite() {
-        guard let _ = selectedNews?.id else {
-            addStarButton()
-            return
-        }
-//        if newsData.isFavorite(userId: UserDefaults.standard.string(forKey: "userId") ?? "", newsId: newsId) {
-//            addStarFillButton()
-//        } else {
-//            addStarButton()
-//        }
-    }
-    
-    @objc private func starButtonTapped() {
-        guard let news = selectedNews,
-              let userId = UserDefaults.standard.string(forKey: "userId") else {
-            return
-        }
-//        newsData.addFavoritesNews(userId: userId, news: news)
-        updateStarButtonAppearance()
-    }
-    
     private func updateStarButtonAppearance() {
-        guard let newsId = selectedNews?.id,
-              let userId = UserDefaults.standard.string(forKey: "userId") else {
+        guard let userId = UserDefaults.standard.string(forKey: "loggedInUserID"),
+              let newsId = selectedNews?.id else {
             addStarButton()
             return
         }
-//        if newsData.isFavorite(userId: userId, newsId: newsId) {
-//            addStarFillButton()
-//        } else {
-//            addStarButton()
-//        }
+
+        let isFav = newsData.isFavorite(userId: userId, newsId: newsId)
+        if isFav {
+            addStarFillButton()
+        } else {
+            addStarButton()
+        }
+    }
+
+    @objc private func starButtonTapped() {
+        guard let userId = UserDefaults.standard.string(forKey: "loggedInUserID"),
+              let newsId = selectedNews?.id else {
+            return
+        }
+
+        if newsData.isFavorite(userId: userId, newsId: newsId) {
+            newsData.removeFavorite(userId: userId, newsId: newsId)
+        } else {
+            newsData.addFavorite(userId: userId, newsId: newsId)
+        }
+        updateStarButtonAppearance()
     }
 }
 
-// Extension for star button methods
+//Starbutton
 extension NewsDetailVC {
     private func addStarButton() {
         let starImage = UIImage(systemName: "star")

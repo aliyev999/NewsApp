@@ -1,10 +1,3 @@
-//
-//  FavoriteVC.swift
-//  NewsApp
-//
-//  Created by AS on 08.06.24.
-//
-
 import UIKit
 
 class FavoriteVC: UIViewController {
@@ -13,28 +6,52 @@ class FavoriteVC: UIViewController {
     
     private var newsList: [News] = []
     private var favoriteNewsList: [News] = []
+    private let newsData = NewsData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getData()
     }
     
-    //Get news list
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if !UserDefaults.standard.bool(forKey: "loggedIn") {
+            let controller = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            navigationController?.show(controller, sender: nil)
+        } else {
+            getData()
+        }
+    }
+    
+    // Fetch favorite news items
     private func getData() {
-        _ = NewsData()
-        //news.getNews(news: &newsList)
-        //newsList = news.loadArticlesFromJSON()!
+        newsData.getNews(news: &newsList)
+        guard let loggedInUserID = UserDefaults.standard.string(forKey: "loggedInUserID") else {
+            print("Logged in user ID not found.")
+            return
+        }
+        
+        let favorites = newsData.getFavorites(userId: loggedInUserID)
+        favoriteNewsList.removeAll()
+        
+        for favorite in favorites {
+            for newsId in favorite.news {
+                if let news = newsList.first(where: { $0.id == newsId }) {
+                    favoriteNewsList.append(news)
+                }
+            }
+        }
+        print(favoriteNewsList)
         collectionView.reloadData()
     }
     
-    //Get favorite news
-    
 }
 
-//CollectionView Settings
-extension FavoriteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+// CollectionView Settings
+extension FavoriteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        favoriteNewsList.count
+        return favoriteNewsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,12 +64,12 @@ extension FavoriteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: collectionView.frame.width, height: 240)
+        return CGSize(width: collectionView.frame.width, height: 240)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller =  storyboard?.instantiateViewController(withIdentifier: "NewsDetailVC") as! NewsDetailVC
-        controller.selectedNews = newsList[indexPath.row]
+        let controller = storyboard?.instantiateViewController(withIdentifier: "NewsDetailVC") as! NewsDetailVC
+        controller.selectedNews = favoriteNewsList[indexPath.row]
         navigationController?.show(controller, sender: nil)
     }
 }
