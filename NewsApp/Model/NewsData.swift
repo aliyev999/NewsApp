@@ -20,14 +20,11 @@ class NewsData {
             } catch {
                 print("Failed to decode news data:", error.localizedDescription)
             }
-        } else {
-            print("News JSON file not found.")
         }
     }
     
     func getFavorites() -> [Favorite] {
         guard let fileURL = favoritesFileURL else {
-            print("Favorites file URL not found.")
             return []
         }
         
@@ -44,7 +41,6 @@ class NewsData {
     
     func getFavorites(userId: String) -> [Favorite] {
         guard let fileURL = favoritesFileURL else {
-            print("Favorites file URL not found.")
             return []
         }
         do {
@@ -94,11 +90,9 @@ class NewsData {
             encoder.outputFormatting = .prettyPrinted
             let data = try encoder.encode(favorites)
             guard let fileURL = favoritesFileURL else {
-                print("Favorites file URL not found.")
                 return
             }
             try data.write(to: fileURL)
-            print("Favorites saved successfully.")
         } catch {
             print("Failed to encode or save favorites data:", error.localizedDescription)
         }

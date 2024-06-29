@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlc-So-ZG7">
+                                <rect key="frame" x="18" y="103" width="47" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="43X-i9-Wae">
-                                <rect key="frame" x="0.0" y="135" width="393" height="634"/>
+                                <rect key="frame" x="0.0" y="138.66666666666669" width="393" height="630.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xdc-tu-7g0">
                                     <size key="itemSize" width="393" height="248"/>
@@ -93,12 +99,6 @@
                                     <outlet property="delegate" destination="6GG-yJ-C2U" id="B35-mJ-mN2"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlc-So-ZG7">
-                                <rect key="frame" x="18" y="103" width="47" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mrs-9T-20B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,7 +108,6 @@
                             <constraint firstItem="43X-i9-Wae" firstAttribute="top" secondItem="rlc-So-ZG7" secondAttribute="bottom" constant="8" symbolic="YES" id="ISU-r1-Ajg"/>
                             <constraint firstItem="mrs-9T-20B" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rlc-So-ZG7" secondAttribute="trailing" symbolic="YES" id="M8u-uv-lpc"/>
                             <constraint firstItem="rlc-So-ZG7" firstAttribute="leading" secondItem="mrs-9T-20B" secondAttribute="leading" constant="18" id="VeC-jL-pR3"/>
-                            <constraint firstItem="43X-i9-Wae" firstAttribute="top" secondItem="mrs-9T-20B" secondAttribute="top" constant="32" id="YvL-FM-bqB"/>
                             <constraint firstItem="rlc-So-ZG7" firstAttribute="top" secondItem="mrs-9T-20B" secondAttribute="top" id="joh-vI-gxz"/>
                             <constraint firstItem="mrs-9T-20B" firstAttribute="bottom" secondItem="43X-i9-Wae" secondAttribute="bottom" id="kzo-iv-Og5"/>
                         </constraints>
@@ -116,7 +115,7 @@
                     <navigationItem key="navigationItem" title="News" leftItemsSupplementBackButton="YES" id="hrg-eL-UbX"/>
                     <connections>
                         <outlet property="collectionView" destination="43X-i9-Wae" id="zj7-9E-Yp4"/>
-                        <outlet property="collectionViewContraint" destination="YvL-FM-bqB" id="wSg-ms-g3h"/>
+                        <outlet property="collectionViewContraint" destination="ISU-r1-Ajg" id="uFf-EM-IGE"/>
                         <outlet property="dateLabel" destination="rlc-So-ZG7" id="3oV-5w-e1o"/>
                     </connections>
                 </viewController>
@@ -263,7 +262,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UUB-ml-Zpo">
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UUB-ml-Zpo">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f3h-gx-P1E">

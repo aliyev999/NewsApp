@@ -6,7 +6,6 @@ class UserData {
     
     private func getUsersFileURL() -> URL? {
         guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            print("Failed to access document directory.")
             return nil
         }
         return url.appendingPathComponent(fileName)

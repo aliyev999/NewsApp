@@ -7,21 +7,26 @@ class FavoriteVC: UIViewController {
     private var newsList: [News] = []
     private var favoriteNewsList: [News] = []
     private let newsData = NewsData()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl.tintColor = .gray
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        
+        // Добавляем refreshControl к superview collectionView, который является UIScrollView
+        if let scrollView = collectionView.superview as? UIScrollView {
+            scrollView.refreshControl = refreshControl
+        }
+        
         getData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if !UserDefaults.standard.bool(forKey: "loggedIn") {
-            let controller = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-            navigationController?.show(controller, sender: nil)
-        } else {
-            getData()
-        }
+    @objc private func refreshData() {
+        getData()
     }
+    
     
     // Fetch favorite news items
     private func getData() {
@@ -41,8 +46,8 @@ class FavoriteVC: UIViewController {
                 }
             }
         }
-        print(favoriteNewsList)
         collectionView.reloadData()
+        refreshControl.endRefreshing()
     }
     
 }

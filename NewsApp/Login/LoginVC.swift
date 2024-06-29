@@ -86,9 +86,13 @@ extension LoginVC {
                 return
             }
             
+            guard Regex.isEmailValid(email) else {
+                showError(message: "Please enter a valid email address")
+                return
+            }
+            
             startLoading()
             DispatchQueue.global().async {
-                // Simulate login process
                 if let user = self.userData.getAllUsers().first(where: { $0.email == email && $0.password == password }) {
                     self.setData(id: user.id ?? "")
                     DispatchQueue.main.async {
@@ -115,6 +119,11 @@ extension LoginVC {
                 return
             }
             
+            guard Regex.isEmailValid(email) else {
+                showError(message: "Please enter a valid email address")
+                return
+            }
+            
             guard password == repeatPassword else {
                 showError(message: "Passwords do not match")
                 return
@@ -138,6 +147,7 @@ extension LoginVC {
             }
         }
     }
+
     
     private func clearFields() {
         nameField.text = ""
