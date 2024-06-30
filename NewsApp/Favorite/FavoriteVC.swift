@@ -3,6 +3,8 @@ import UIKit
 class FavoriteVC: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private var favView: UIView!
+    @IBOutlet private weak var warningLabel: UILabel!
     
     private var newsList: [News] = []
     private var favoriteNewsList: [News] = []
@@ -11,31 +13,53 @@ class FavoriteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getData()
+        setupUI()
+    }
+    
+    @objc
+    private func refreshData() {
+        getData()
+        refreshControl.endRefreshing()
+    }
+    
+    private func setupUI() {
+        setupConstraints()
         
-        refreshControl.tintColor = .gray
-        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(FavoriteVC.refreshData), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Update favorites", attributes: nil)
+        refreshControl.tintColor = UIColor(named: "firstColor")
         
-        // Добавляем refreshControl к superview collectionView, который является UIScrollView
-        if let scrollView = collectionView.superview as? UIScrollView {
-            scrollView.refreshControl = refreshControl
+        if #available(iOS 10.0, *) {
+            collectionView.refreshControl = refreshControl
+        } else {
+            collectionView.addSubview(refreshControl)
         }
+    }
+    
+    private func setupConstraints() {
+        warningLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        getData()
+        let verticalConstraint = NSLayoutConstraint(item: warningLabel!, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        view.addConstraint(verticalConstraint)
+        
+        let horizontalConstraint = NSLayoutConstraint(item: warningLabel!, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        view.addConstraint(horizontalConstraint)
     }
-    
-    @objc private func refreshData() {
-        getData()
-    }
-    
     
     // Fetch favorite news items
     private func getData() {
         newsData.getNews(news: &newsList)
         guard let loggedInUserID = UserDefaults.standard.string(forKey: "loggedInUserID") else {
             print("Logged in user ID not found.")
+            collectionView.isHidden = true
+            warningLabel.isHidden = false
             return
         }
         
+        collectionView.isHidden = false
+        warningLabel.isHidden = true
+
         let favorites = newsData.getFavorites(userId: loggedInUserID)
         favoriteNewsList.removeAll()
         
@@ -47,9 +71,7 @@ class FavoriteVC: UIViewController {
             }
         }
         collectionView.reloadData()
-        refreshControl.endRefreshing()
     }
-    
 }
 
 // CollectionView Settings

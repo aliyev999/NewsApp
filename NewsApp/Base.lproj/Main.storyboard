@@ -25,17 +25,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="43X-i9-Wae">
-                                <rect key="frame" x="0.0" y="138.66666666666669" width="393" height="630.33333333333326"/>
+                                <rect key="frame" x="0.0" y="130.66666666666669" width="393" height="638.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xdc-tu-7g0">
                                     <size key="itemSize" width="393" height="248"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="r3C-LP-YqR" customClass="NewsCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="248"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qgb-ej-MEO">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="248"/>
@@ -94,6 +94,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xe7-If-jtU">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="6GG-yJ-C2U" id="A3c-Al-5e5"/>
                                     <outlet property="delegate" destination="6GG-yJ-C2U" id="B35-mJ-mN2"/>
@@ -105,9 +109,9 @@
                         <constraints>
                             <constraint firstItem="mrs-9T-20B" firstAttribute="trailing" secondItem="43X-i9-Wae" secondAttribute="trailing" id="FL5-aj-7MN"/>
                             <constraint firstItem="43X-i9-Wae" firstAttribute="leading" secondItem="mrs-9T-20B" secondAttribute="leading" id="GeE-4D-J1s"/>
-                            <constraint firstItem="43X-i9-Wae" firstAttribute="top" secondItem="rlc-So-ZG7" secondAttribute="bottom" constant="8" symbolic="YES" id="ISU-r1-Ajg"/>
                             <constraint firstItem="mrs-9T-20B" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rlc-So-ZG7" secondAttribute="trailing" symbolic="YES" id="M8u-uv-lpc"/>
                             <constraint firstItem="rlc-So-ZG7" firstAttribute="leading" secondItem="mrs-9T-20B" secondAttribute="leading" constant="18" id="VeC-jL-pR3"/>
+                            <constraint firstItem="43X-i9-Wae" firstAttribute="top" secondItem="rlc-So-ZG7" secondAttribute="bottom" id="XI4-bZ-uXa"/>
                             <constraint firstItem="rlc-So-ZG7" firstAttribute="top" secondItem="mrs-9T-20B" secondAttribute="top" id="joh-vI-gxz"/>
                             <constraint firstItem="mrs-9T-20B" firstAttribute="bottom" secondItem="43X-i9-Wae" secondAttribute="bottom" id="kzo-iv-Og5"/>
                         </constraints>
@@ -115,7 +119,7 @@
                     <navigationItem key="navigationItem" title="News" leftItemsSupplementBackButton="YES" id="hrg-eL-UbX"/>
                     <connections>
                         <outlet property="collectionView" destination="43X-i9-Wae" id="zj7-9E-Yp4"/>
-                        <outlet property="collectionViewContraint" destination="ISU-r1-Ajg" id="uFf-EM-IGE"/>
+                        <outlet property="collectionViewContraint" destination="XI4-bZ-uXa" id="rBf-N9-LIv"/>
                         <outlet property="dateLabel" destination="rlc-So-ZG7" id="3oV-5w-e1o"/>
                     </connections>
                 </viewController>
@@ -262,6 +266,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites needed. Please log in." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ahS-JM-Ezk">
+                                <rect key="frame" x="0.0" y="93" width="393" height="666"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UUB-ml-Zpo">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -351,6 +362,8 @@
                     <navigationItem key="navigationItem" title="Favorite" style="editor" id="Yho-Uh-zeN"/>
                     <connections>
                         <outlet property="collectionView" destination="UUB-ml-Zpo" id="kJp-Qa-7At"/>
+                        <outlet property="favView" destination="46C-DD-cdq" id="OvO-K4-y9h"/>
+                        <outlet property="warningLabel" destination="ahS-JM-Ezk" id="bqt-EP-K3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSC-ZJ-LFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

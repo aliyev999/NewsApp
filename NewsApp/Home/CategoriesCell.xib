@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCell" id="gTV-IL-0wX" customClass="CategoriesCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="164" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="164" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-uf-4KW">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAe-kZ-NvH">
+                                <rect key="frame" x="61.333333333333329" y="30" width="41.333333333333329" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="firstColor"/>
+                        <constraints>
+                            <constraint firstItem="kAe-kZ-NvH" firstAttribute="centerX" secondItem="cgb-uf-4KW" secondAttribute="centerX" id="M7g-nG-kqd"/>
+                            <constraint firstItem="kAe-kZ-NvH" firstAttribute="centerY" secondItem="cgb-uf-4KW" secondAttribute="centerY" id="xLp-8s-jjq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cgb-uf-4KW" secondAttribute="trailing" id="5w2-NZ-pvD"/>
+                <constraint firstItem="cgb-uf-4KW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bhn-lZ-5ZP"/>
+                <constraint firstItem="cgb-uf-4KW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JMg-2n-qhd"/>
+                <constraint firstAttribute="bottom" secondItem="cgb-uf-4KW" secondAttribute="bottom" id="S4s-zo-y08"/>
+            </constraints>
+            <size key="customSize" width="164" height="80"/>
+            <connections>
+                <outlet property="categoryLabel" destination="kAe-kZ-NvH" id="Lx8-uE-nmL"/>
+                <outlet property="view" destination="cgb-uf-4KW" id="YVN-at-zTJ"/>
+            </connections>
+            <point key="canvasLocation" x="151.14503816793894" y="30.281690140845072"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="firstColor">
+            <color red="0.92199999094009399" green="0.30199998617172241" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

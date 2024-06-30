@@ -21,7 +21,6 @@ class NewsDetailVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateStarButtonAppearance()
-        print(newsData.getFavorites())
     }
     
     private func setupUI() {
@@ -41,10 +40,11 @@ class NewsDetailVC: UIViewController {
         category.text = selectedNews?.category?.rawValue
     }
     
-    private func calculateReadingTime(for text: String, wordsPerMinute: Int) -> Int {
-        let words = text.split(whereSeparator: { !$0.isLetter })
+    func calculateReadingTime(for text: String, wordsPerMinute: Int = 200) -> Int {
+        let words = text.components(separatedBy: .whitespacesAndNewlines).filter { !$0.isEmpty }
         let wordCount = words.count
-        return Int(ceil(Double(wordCount) / Double(wordsPerMinute)))
+        let readingTime = Int(ceil(Double(wordCount) / Double(wordsPerMinute)))
+        return readingTime
     }
     
     private func updateStarButtonAppearance() {
@@ -65,6 +65,7 @@ class NewsDetailVC: UIViewController {
     @objc private func starButtonTapped() {
         guard let userId = UserDefaults.standard.string(forKey: "loggedInUserID"),
               let newsId = selectedNews?.id else {
+            showLoginAlert()
             return
         }
 
@@ -75,9 +76,15 @@ class NewsDetailVC: UIViewController {
         }
         updateStarButtonAppearance()
     }
+    
+    private func showLoginAlert() {
+        let alert = UIAlertController(title: "Login Required", message: "Please log in to add this news to favorites.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
-//Starbutton
+// Star button extension
 extension NewsDetailVC {
     private func addStarButton() {
         let starImage = UIImage(systemName: "star")

@@ -1,20 +1,25 @@
-//
-//  HomeViewModel.swift
-//  NewsApp
-//
-//  Created by AS on 21.06.24.
-//
-
 import Foundation
 
 class HomeViewModel {
     var newsList: [News] = []
+    var filteredNewsList: [News] = []
     
     var callback: (() -> Void)?
-    //Get news list
+    
     func getData() {
-        let news = NewsData()
-        news.getNews(news: &newsList)
+        let newsData = NewsData()
+        newsData.getNews(news: &newsList)
+        filteredNewsList = newsList
+        callback?()
+    }
+    
+    func filterDataByCategory(_ category: Category?) {
+        filteredNewsList = newsList.filter { $0.category?.rawValue == category?.rawValue }
+        callback?()
+    }
+    
+    func resetFilter() {
+        filteredNewsList = newsList
         callback?()
     }
 }

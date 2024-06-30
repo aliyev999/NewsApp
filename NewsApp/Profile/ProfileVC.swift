@@ -68,7 +68,7 @@ extension ProfileVC {
         let alert = UIAlertController(title: "Are you sure?", message: "Do you want to log out?", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { (_) in
-            self.startLoading() // Начать показ activityIndicator
+            self.startLoading()
                 DispatchQueue.global().async {
                 Thread.sleep(forTimeInterval: 2)
                 DispatchQueue.main.async {

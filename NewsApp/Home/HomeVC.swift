@@ -21,6 +21,7 @@ class HomeVC: UIViewController {
     }
     
     private func setupUI() {
+        collectionView.register(UINib(nibName: "\(CategoriesHeader.self)", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "\(CategoriesHeader.self)")
         updateDateLabelVisibility()
         addSearchButton()
         getDate()
@@ -40,7 +41,7 @@ class HomeVC: UIViewController {
         if shouldHideDateLabel {
             collectionViewContraint.constant = 0
         } else {
-            collectionViewContraint.constant = 32
+            collectionViewContraint.constant = 14
         }
         view.layoutIfNeeded()
     }
@@ -73,12 +74,12 @@ class HomeVC: UIViewController {
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.newsList.count
+        viewModel.filteredNewsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as! NewsCell
-        let newsItem = viewModel.newsList[indexPath.row]
+        let newsItem = viewModel.filteredNewsList[indexPath.row]
         cell.newsHeader.text = newsItem.header
         cell.newsText.text = newsItem.text
         cell.newsImage.image = UIImage(named: newsItem.image ?? "")
@@ -94,6 +95,19 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         controller.selectedNews = viewModel.newsList[indexPath.row]
         navigationController?.show(controller, sender: nil)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CategoriesHeader", for: indexPath) as! CategoriesHeader
+        header.selectedCallback = { [weak self]selectedCategory in
+            if selectedCategory != nil {
+                self?.viewModel.filterDataByCategory(selectedCategory)
+            } else {
+                self?.viewModel.resetFilter()
+            }
+        }
+        return header
+    }
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateDateLabelVisibility()
