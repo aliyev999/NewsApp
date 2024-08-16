@@ -134,6 +134,8 @@ extension LoginVC {
                 return
             }
             
+            
+            
             startLoading()
             DispatchQueue.global().async {
                 // Simulate registration process

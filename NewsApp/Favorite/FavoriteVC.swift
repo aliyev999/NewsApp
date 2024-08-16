@@ -30,11 +30,7 @@ class FavoriteVC: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "Update favorites", attributes: nil)
         refreshControl.tintColor = UIColor(named: "firstColor")
         
-        if #available(iOS 10.0, *) {
-            collectionView.refreshControl = refreshControl
-        } else {
-            collectionView.addSubview(refreshControl)
-        }
+        collectionView.refreshControl = refreshControl
     }
     
     private func setupConstraints() {
